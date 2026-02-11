@@ -35,6 +35,10 @@ class QuizzModel extends FlutterFlowModel<QuizzWidget> {
 
   int nrWrong = 0;
 
+  List<int?> selectedAnswers = [];
+
+  bool reviewMode = false;
+
   @override
   void initState(BuildContext context) {}
 

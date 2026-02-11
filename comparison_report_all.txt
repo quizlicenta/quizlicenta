@@ -1,0 +1,122 @@
+Total questions: 714
+Matched in PDF (question text only): 116
+Not matched: 598
+
+[asd] matched 4/50 missing 46
+[bazedate] matched 4/50 missing 46
+[cloud] matched 18/20 missing 2
+[comert] matched 42/48 missing 6
+[criptografie] matched 8/50 missing 42
+[fp] matched 1/50 missing 49
+[inovare] matched 0/30 missing 30
+[java] matched 3/54 missing 51
+[poo] matched 2/50 missing 48
+[python] matched 0/50 missing 50
+[retele] matched 0/58 missing 58
+[sgbd] matched 4/50 missing 46
+[so] matched 15/50 missing 35
+[tap] matched 0/50 missing 50
+[web] matched 15/54 missing 39
+
+--- Missing (first 5 per category) ---
+[asd]
+- Se dă următorul algoritm: for i = 1, n  poz[i] = 1 endfor for i = 1, n-1 for j = i+1, n if x[j] < x[i] then poz[i] = poz[i] + 1  else poz[j] = poz[j] + 1  endif endfor endfor Știind că datele de intra
+- Se dă următoarea funcție recursivă 1) int inaltime(NodArb *rad)  2) // returneaza inaltimea unui arbore binar  3) { 4) if(rad == NULL) return 0; 5) ....................................................
+- Se dă următoarea funcție int cautare(int x[], int first, int last, int value)  { int mid;  if(first > last) return -1;  mid = (first + last) / 2;   if (x[mid] == value) return mid;  if(x[mid] < value)
+- Parcurgerea în preordine a arborelui binar din Fig. 1 va afișa
+- Parcurgerea în inordine a arborelui binar din Fig. 1 va afișa
+
+[bazedate]
+- O bază de date reprezintă:
+- Depozitul de date reprezintă:
+- Când se recomandă să se introducă datele într-o baza de date?
+- Care dintre următoarele enunţuri caracterizează modelul relaţional?
+- Intersecţia a două relaţii:
+
+[cloud]
+- Care sunt modelele standard de servicii funizate "cloud computing":
+- Care sunt modelele de arhitectura de "cloud computing":
+
+[comert]
+- Protocolul SET (Secure Electronic Transaction) asigură urmatoarele:
+- Care din următoarele enunturi nu reprezintă un tip de organizatie de comert electronic:
+- Conform OG 34/2006, achizitiile publice în România se derulează pe platforma online:
+- Tranzactiile electronice din punctul de vedere al comertului electronic prezintă următoarele cerinte:
+- Care din urmatoarele roluri de mai jos nu este asociat unei Autorităti de Certificare (AC):
+
+[criptografie]
+- Care este rolul blocului de criptare informațională?
+- Cheia criptografică este:
+- Un sistem criptografic pentru transmiterea/recepția informației se compune din:
+- Decriptarea reprezintă:
+- Domeniul de știință al criptologiei are următoarele laturi:
+
+[fp]
+- În care dintre variantele de mai jos se declară un tablou unidimensional (vector) 𝑥 în care se pot memora cel mult 100 de numere reale?
+- Care dintre următoarele expresii logice este adevărată (are o valoare nenulă) dacă şi numai dacă numărul real memorat în variabila 𝑥 nu aparţine intervalului (0,5]?
+- Care dintre următoarele expresii este adevărată (are o valoare nenulă) dacă şi numai dacă numărul întreg memorat în variabila 𝑥 aparţine intervalului (1,6]?
+- După executarea instrucțiunii float x = 27/5*2/3*7; ce valoare va fi memorată în variabila 𝑥?
+- După executarea instrucțiunii float x = 55/17*5/8+48/5/8*15; ce valoare va fi memorată în variabila 𝑥?
+
+[inovare]
+- Inovarea reprezintă:
+- În funcție de gradul de schimbare (intensitatea schimbării generate), inovarea se clasifică în:
+- In funcție de tip (obiect), inovarea se clasifică în:
+- Produsul reprezintă:
+- Invenția privind linia de asamblare reprezintă un exemplu de:
+
+[java]
+- Fie următoarea clasă Java: class C  { 	int a; 	float x; 	boolean b; } Stabiliţi care dintre următoarele linii de cod este corectă:
+- Fie următorul program Java: class C { 	public static int a=1; } public class test  { 	public static void main(String[] args)  	{ 		C ob=new C(); 		C.a++; 		ob.a++; 		System.out.println(C.a); 	} } După
+- Fie următorul program Java: class C{public static int a=1;} public class teste_grila  { 	public static void main(String[] args)  	{ 		C ob1=new C(); 		C ob2=new C();  		ob1.a++; 		System.out.println(o
+- Un program Test scris în limbajul Java şi compilat, poate fi rulat folosind comanda:
+- În Java o clasă poate extinde:
+
+[poo]
+- Fie secvența în limbajul C++: class cls{ public: 	cls(){ cout<<"constructor";} 	cls(cls &c){cout<<"constructor de copiere";} }; int f(cls c){ return 1;} int main(){ 	cls c;  	f(c); 	return 0; } În mom
+- Fie secvența în limbajul C++: class cls{ public:  	cls(){ cout<<"constructor";} 	cls(cls &c){cout<<"constructor de copiere";} }; int f(cls &c){ return 1;} int main(){ 	cls c;  	f(c); 	return 0; } În m
+- Fie secvența în limbajul C++: class C{ 	int a; public: 	virtual void metoda1()=0; 	virtual void metoda2()=0; };  int main(){ 	C *pob; //declarația 1 	C ob; //declarația 2 	C *vpob[5]; //declarația 3 	
+- Polimorfismul dinamic în limbajul C++ se realizează cu ajutorul:
+- Secvenţa următoare în limbajul C++: class c1{ public: 	int a; 	c1(int y){ a=y;cout<<"constructor 1";} 	c1(){cout<<"destructor 2";} }; class c2:public c1{ public:  	int b; 	c2(int y, int x):c1(y) { b=x
+
+[python]
+- Care dintre următoarele colecții de date din limbajul Python este imutabilă?
+- Pentru ca instrucțiunea Python del t[1:4] să nu producă o eroare în momentul executării sale, variabila t trebuie să fie inițializată prin:
+- Pentru ca instrucțiunea Python t[1]=7 să nu producă o eroare în momentul executării sale, variabila t trebuie să fie inițializată prin:
+- Care dintre următoarele expresii logice scrise în limbajul Python este adevărată dacă şi numai dacă numărul natural memorat în variabila 𝑥 este par și nu aparţine intervalului (10,20]?
+- Considerăm următoarele 5 expresii scrise în limbajul Python: (a+b)/2==m, (a+b)//2==m, a+b==2*m, (b-a)/2==m–a și a//2==m-b//2. Câte dintre ele sunt adevărate dacă şi numai dacă numărul real 𝑚 este egal
+
+[retele]
+- Ce algoritmi matematici se pot folosi pentru a calcula distanța minimă dintre noduri într-o rețea?
+- Rutarea este:
+- Care dintre următoarele entități nu poate fi un câmp în tabela de rutare:
+- Un ruter dirijează pachetele IP pe baza:
+- Ce port este folosit pentru configurarea inițială a unui ruter direct de la un calculator, fără a necesita autentificare?
+
+[sgbd]
+- O tranzacție este:
+- Proprietatea de consistență a tranzacției constă din:
+- O bază de date distribuită se găsește implementată numai:
+- Se dă tabelul STUDENT(CNP, Nume, Grupa, Adresa) și următoarea secvență ce reprezintă o tranzacție:<br><pre>CREATE table STUDENT_NOU ( CNP NUMBER, Nume VARCHAR(30))<br>INSERT INTO STUDENT_NOU SELECT CN
+- Când creați o bază de date Microsoft Sql Server, care sunt fișierele care trebuie create obligatoriu?
+
+[so]
+- Ce fișier este utilizat pentru a seta numele gazdei (hostname) pe un sistem Linux?
+- Cum afișezi spațiul liber pe disc într-un sistem Linux?
+- Cum setezi permisiunea de executare pentru toate fișierele dintr-un director?
+- Cum ștergi toate fișierele mai vechi de 7 zile dintr-un director?
+- Cum listezi toate procesele care aparțin unui anumit utilizator?
+
+[tap]
+- Complexitatea minimă a unui algoritm care calculează numărul tuturor submulțimilor unei mulțimi cu 𝑛 elemente este:
+- În Aula Magna a Universității Titu Maiorescu din București se va organiza un festival de teatru care va dura o singură zi. Fiecare regizor a transmis organizatorului festivalului intervalul de timp în
+- În Aula Magna a Universității Titu Maiorescu din București se va organiza un festival de teatru care va dura o singură zi. Fiecare regizor a transmis organizatorului festivalului intervalul de timp [ℎ
+- În Aula Magna a Universității Titu Maiorescu din București se va organiza un festival de teatru care va dura o singură zi. Fiecare regizor a transmis organizatorului festivalului intervalul de timp [ℎ
+- Se consideră un triunghi de numere întregi format din 𝑛 linii, astfel: prima linie conține un număr, a doua linie conține două numere,. . ., ultima linie conține 𝑛 numere. În acest triunghi se pot for
+
+[web]
+- Primul fişier imagine încărcat într-o pagină html poate fi schimbat cu un alt fişier daca se utilizează:
+- Care dintre următoarele coduri nu este corect pentru setarea imaginii de fundal a unei pagini Web?
+- Dimensionarea unei imagini se realizează folosind urmatoarele atribute ale tag-ului <img>?
+- Care dintre următoarele afirmații este adevărată?
+- Care din următoarele taguri sunt definite correct?

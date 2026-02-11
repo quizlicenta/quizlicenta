@@ -25,6 +25,41 @@ class _HomeWidgetState extends State<HomeWidget> {
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
+  Future<List<dynamic>> _loadSection(String sectionKey) async {
+    final data = await functions.loadQuestionsMap('lib/questions.json');
+    return functions
+        .shuffleQuestions(functions.getQuestionsSection(data, sectionKey));
+  }
+
+  Future<void> _openSection(String sectionKey, String title) async {
+    final section = await _loadSection(sectionKey);
+    if (section.isEmpty) {
+      _showMissingSection(title);
+      return;
+    }
+    context.pushNamed(
+      QuizzWidget.routeName,
+      queryParameters: {
+        'jsonQuestions': serializeParam(
+          section,
+          ParamType.JSON,
+        ),
+        'title': serializeParam(
+          title,
+          ParamType.String,
+        ),
+      }.withoutNulls,
+    );
+  }
+
+  void _showMissingSection(String title) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text('Nu exista intrebari pentru: $title'),
+      ),
+    );
+  }
+
   @override
   void initState() {
     super.initState();
@@ -157,19 +192,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                             children: [
                               FFButtonWidget(
                                 onPressed: () async {
-                                  context.pushNamed(
-                                    QuizzWidget.routeName,
-                                    queryParameters: {
-                                      'jsonQuestions': serializeParam(
-                                        functions
-                                            .stringToJson(FFAppConstants.asd),
-                                        ParamType.JSON,
-                                      ),
-                                      'title': serializeParam(
-                                        'ASD',
-                                        ParamType.String,
-                                      ),
-                                    }.withoutNulls,
+                                  await _openSection(
+                                    'as',
+                                    'ASD',
                                   );
                                 },
                                 text: 'ASD',
@@ -215,19 +240,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                               ),
                               FFButtonWidget(
                                 onPressed: () async {
-                                  context.pushNamed(
-                                    QuizzWidget.routeName,
-                                    queryParameters: {
-                                      'jsonQuestions': serializeParam(
-                                        functions.stringToJson(
-                                            FFAppConstants.bazedate),
-                                        ParamType.JSON,
-                                      ),
-                                      'title': serializeParam(
-                                        'Baze de Date',
-                                        ParamType.String,
-                                      ),
-                                    }.withoutNulls,
+                                  await _openSection(
+                                    'bazededate',
+                                    'Baze de Date',
                                   );
                                 },
                                 text: 'Baze Date',
@@ -273,19 +288,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                               ),
                               FFButtonWidget(
                                 onPressed: () async {
-                                  context.pushNamed(
-                                    QuizzWidget.routeName,
-                                    queryParameters: {
-                                      'jsonQuestions': serializeParam(
-                                        functions
-                                            .stringToJson(FFAppConstants.cloud),
-                                        ParamType.JSON,
-                                      ),
-                                      'title': serializeParam(
-                                        'Cloud Computing',
-                                        ParamType.String,
-                                      ),
-                                    }.withoutNulls,
+                                  await _openSection(
+                                    'cloud',
+                                    'Cloud Computing',
                                   );
                                 },
                                 text: 'Cloud',
@@ -331,19 +336,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                               ),
                               FFButtonWidget(
                                 onPressed: () async {
-                                  context.pushNamed(
-                                    QuizzWidget.routeName,
-                                    queryParameters: {
-                                      'jsonQuestions': serializeParam(
-                                        functions.stringToJson(
-                                            FFAppConstants.comert),
-                                        ParamType.JSON,
-                                      ),
-                                      'title': serializeParam(
-                                        'Comert Electronic',
-                                        ParamType.String,
-                                      ),
-                                    }.withoutNulls,
+                                  await _openSection(
+                                    'comert',
+                                    'Comert Electronic',
                                   );
                                 },
                                 text: 'Comert',
@@ -389,19 +384,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                               ),
                               FFButtonWidget(
                                 onPressed: () async {
-                                  context.pushNamed(
-                                    QuizzWidget.routeName,
-                                    queryParameters: {
-                                      'jsonQuestions': serializeParam(
-                                        functions.stringToJson(
-                                            FFAppConstants.criptografie),
-                                        ParamType.JSON,
-                                      ),
-                                      'title': serializeParam(
-                                        'Criptografie',
-                                        ParamType.String,
-                                      ),
-                                    }.withoutNulls,
+                                  await _openSection(
+                                    'criptografie',
+                                    'Criptografie',
                                   );
                                 },
                                 text: 'Cripto',
@@ -447,19 +432,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                               ),
                               FFButtonWidget(
                                 onPressed: () async {
-                                  context.pushNamed(
-                                    QuizzWidget.routeName,
-                                    queryParameters: {
-                                      'jsonQuestions': serializeParam(
-                                        functions
-                                            .stringToJson(FFAppConstants.fp),
-                                        ParamType.JSON,
-                                      ),
-                                      'title': serializeParam(
-                                        'Fundamentele Programarii',
-                                        ParamType.String,
-                                      ),
-                                    }.withoutNulls,
+                                  await _openSection(
+                                    'fp',
+                                    'Fundamentele Programarii',
                                   );
                                 },
                                 text: 'FP',
@@ -505,19 +480,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                               ),
                               FFButtonWidget(
                                 onPressed: () async {
-                                  context.pushNamed(
-                                    QuizzWidget.routeName,
-                                    queryParameters: {
-                                      'jsonQuestions': serializeParam(
-                                        functions.stringToJson(
-                                            FFAppConstants.inovare),
-                                        ParamType.JSON,
-                                      ),
-                                      'title': serializeParam(
-                                        'Inovare',
-                                        ParamType.String,
-                                      ),
-                                    }.withoutNulls,
+                                  await _openSection(
+                                    'inovare',
+                                    'Inovare',
                                   );
                                 },
                                 text: 'Inovare',
@@ -563,19 +528,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                               ),
                               FFButtonWidget(
                                 onPressed: () async {
-                                  context.pushNamed(
-                                    QuizzWidget.routeName,
-                                    queryParameters: {
-                                      'jsonQuestions': serializeParam(
-                                        functions
-                                            .stringToJson(FFAppConstants.java),
-                                        ParamType.JSON,
-                                      ),
-                                      'title': serializeParam(
-                                        'Java',
-                                        ParamType.String,
-                                      ),
-                                    }.withoutNulls,
+                                  await _openSection(
+                                    'java',
+                                    'Java',
                                   );
                                 },
                                 text: 'Java',
@@ -621,19 +576,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                               ),
                               FFButtonWidget(
                                 onPressed: () async {
-                                  context.pushNamed(
-                                    QuizzWidget.routeName,
-                                    queryParameters: {
-                                      'jsonQuestions': serializeParam(
-                                        functions.stringToJson(
-                                            FFAppConstants.python),
-                                        ParamType.JSON,
-                                      ),
-                                      'title': serializeParam(
-                                        'Python',
-                                        ParamType.String,
-                                      ),
-                                    }.withoutNulls,
+                                  await _openSection(
+                                    'python',
+                                    'Python',
                                   );
                                 },
                                 text: 'Python',
@@ -679,19 +624,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                               ),
                               FFButtonWidget(
                                 onPressed: () async {
-                                  context.pushNamed(
-                                    QuizzWidget.routeName,
-                                    queryParameters: {
-                                      'jsonQuestions': serializeParam(
-                                        functions
-                                            .stringToJson(FFAppConstants.poo),
-                                        ParamType.JSON,
-                                      ),
-                                      'title': serializeParam(
-                                        'POO',
-                                        ParamType.String,
-                                      ),
-                                    }.withoutNulls,
+                                  await _openSection(
+                                    'poo',
+                                    'POO',
                                   );
                                 },
                                 text: 'POO',
@@ -737,19 +672,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                               ),
                               FFButtonWidget(
                                 onPressed: () async {
-                                  context.pushNamed(
-                                    QuizzWidget.routeName,
-                                    queryParameters: {
-                                      'jsonQuestions': serializeParam(
-                                        functions.stringToJson(
-                                            FFAppConstants.retele),
-                                        ParamType.JSON,
-                                      ),
-                                      'title': serializeParam(
-                                        'Retele',
-                                        ParamType.String,
-                                      ),
-                                    }.withoutNulls,
+                                  await _openSection(
+                                    'retele',
+                                    'Retele',
                                   );
                                 },
                                 text: 'Retele',
@@ -795,19 +720,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                               ),
                               FFButtonWidget(
                                 onPressed: () async {
-                                  context.pushNamed(
-                                    QuizzWidget.routeName,
-                                    queryParameters: {
-                                      'jsonQuestions': serializeParam(
-                                        functions
-                                            .stringToJson(FFAppConstants.sgbd),
-                                        ParamType.JSON,
-                                      ),
-                                      'title': serializeParam(
-                                        'SGBD',
-                                        ParamType.String,
-                                      ),
-                                    }.withoutNulls,
+                                  await _openSection(
+                                    'sgdb',
+                                    'SGBD',
                                   );
                                 },
                                 text: 'SGBD',
@@ -853,19 +768,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                               ),
                               FFButtonWidget(
                                 onPressed: () async {
-                                  context.pushNamed(
-                                    QuizzWidget.routeName,
-                                    queryParameters: {
-                                      'jsonQuestions': serializeParam(
-                                        functions
-                                            .stringToJson(FFAppConstants.so),
-                                        ParamType.JSON,
-                                      ),
-                                      'title': serializeParam(
-                                        'Sisteme Operare',
-                                        ParamType.String,
-                                      ),
-                                    }.withoutNulls,
+                                  await _openSection(
+                                    'so',
+                                    'Sisteme Operare',
                                   );
                                 },
                                 text: 'SO',
@@ -911,19 +816,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                               ),
                               FFButtonWidget(
                                 onPressed: () async {
-                                  context.pushNamed(
-                                    QuizzWidget.routeName,
-                                    queryParameters: {
-                                      'jsonQuestions': serializeParam(
-                                        functions
-                                            .stringToJson(FFAppConstants.tap),
-                                        ParamType.JSON,
-                                      ),
-                                      'title': serializeParam(
-                                        'TAP',
-                                        ParamType.String,
-                                      ),
-                                    }.withoutNulls,
+                                  await _openSection(
+                                    'tap',
+                                    'TAP',
                                   );
                                 },
                                 text: 'TAP',
@@ -969,19 +864,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                               ),
                               FFButtonWidget(
                                 onPressed: () async {
-                                  context.pushNamed(
-                                    QuizzWidget.routeName,
-                                    queryParameters: {
-                                      'jsonQuestions': serializeParam(
-                                        functions
-                                            .stringToJson(FFAppConstants.web),
-                                        ParamType.JSON,
-                                      ),
-                                      'title': serializeParam(
-                                        'Web',
-                                        ParamType.String,
-                                      ),
-                                    }.withoutNulls,
+                                  await _openSection(
+                                    'web',
+                                    'Web',
                                   );
                                 },
                                 text: 'Web',
@@ -1038,50 +923,35 @@ class _HomeWidgetState extends State<HomeWidget> {
                           EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 20.0),
                       child: FFButtonWidget(
                         onPressed: () async {
-                          _model.addToAllQuestions(FFAppConstants.asd);
-                          safeSetState(() {});
-                          _model.addToAllQuestions(FFAppConstants.bazedate);
-                          safeSetState(() {});
-                          _model.addToAllQuestions(FFAppConstants.cloud);
-                          safeSetState(() {});
-                          _model.addToAllQuestions(FFAppConstants.comert);
-                          safeSetState(() {});
-                          _model.addToAllQuestions(FFAppConstants.criptografie);
-                          safeSetState(() {});
-                          _model.addToAllQuestions(FFAppConstants.fp);
-                          safeSetState(() {});
-                          _model.addToAllQuestions(FFAppConstants.inovare);
-                          safeSetState(() {});
-                          _model.addToAllQuestions(FFAppConstants.java);
-                          safeSetState(() {});
-                          _model.addToAllQuestions(FFAppConstants.poo);
-                          safeSetState(() {});
-                          _model.addToAllQuestions(FFAppConstants.python);
-                          safeSetState(() {});
-                          _model.addToAllQuestions(FFAppConstants.retele);
-                          safeSetState(() {});
-                          _model.addToAllQuestions(FFAppConstants.sgbd);
-                          safeSetState(() {});
-                          _model.addToAllQuestions(FFAppConstants.so);
-                          safeSetState(() {});
-                          _model.addToAllQuestions(FFAppConstants.tap);
-                          safeSetState(() {});
-                          _model.addToAllQuestions(FFAppConstants.web);
-                          safeSetState(() {});
-                          for (int loop1Index = 0;
-                              loop1Index <
-                                  _model.allQuestions
-                                      .map((e) => e)
-                                      .toList()
-                                      .length;
-                              loop1Index++) {
-                            final currentLoop1Item = _model.allQuestions
-                                .map((e) => e)
-                                .toList()[loop1Index];
-                            _model.auxJson =
-                                functions.stringToJson(currentLoop1Item);
-                            safeSetState(() {});
-                            _model.auxQuizzList = (_model.auxJson!
+                          _model.quizzList = [];
+
+                          final data =
+                              await functions.loadQuestionsMap('lib/questions.json');
+                          final sectionKeys = [
+                            'as',
+                            'bazededate',
+                            'cloud',
+                            'comert',
+                            'criptografie',
+                            'fp',
+                            'inovare',
+                            'java',
+                            'poo',
+                            'python',
+                            'retele',
+                            'sgdb',
+                            'so',
+                            'tap',
+                            'web',
+                          ];
+
+                          for (final key in sectionKeys) {
+                            final section =
+                                functions.getQuestionsSection(data, key);
+                            if (section.isEmpty) {
+                              continue;
+                            }
+                            final auxQuizzList = (section
                                         .toList()
                                         .map<QuestionDataTypeStruct?>(
                                             QuestionDataTypeStruct.maybeFromMap)
@@ -1090,23 +960,16 @@ class _HomeWidgetState extends State<HomeWidget> {
                                 .withoutNulls
                                 .toList()
                                 .cast<QuestionDataTypeStruct>();
-                            safeSetState(() {});
-                            for (int loop2Index = 0;
-                                loop2Index <
-                                    functions
-                                        .randomListItems(
-                                            _model.auxQuizzList.toList())
-                                        .length;
-                                loop2Index++) {
-                              final currentLoop2Item =
-                                  functions.randomListItems(
-                                      _model.auxQuizzList.toList())[loop2Index];
-                              _model.addToQuizzList(currentLoop2Item);
-                              safeSetState(() {});
+
+                            for (final item in functions
+                                .randomListItems(auxQuizzList.toList())) {
+                              _model.addToQuizzList(item);
                             }
-                            _model.auxQuizzList = [];
-                            _model.auxJson = null;
-                            safeSetState(() {});
+                          }
+
+                          if (_model.quizzList.isEmpty) {
+                            _showMissingSection('Test');
+                            return;
                           }
 
                           context.pushNamed(
@@ -1121,8 +984,6 @@ class _HomeWidgetState extends State<HomeWidget> {
                           );
 
                           _model.quizzList = [];
-                          _model.auxQuizzList = [];
-                          _model.auxJson = null;
                           safeSetState(() {});
                         },
                         text: 'Generate Test',

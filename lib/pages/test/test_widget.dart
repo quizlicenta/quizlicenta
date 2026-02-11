@@ -47,6 +47,15 @@ class _TestWidgetState extends State<TestWidget> {
       _model.questionIndex = widget.questionNumber;
       _model.question =
           _model.questionsList.elementAtOrNull(_model.questionIndex);
+      _model.selectedAnswers =
+          List<int?>.filled(_model.questionsList.length, null);
+      _model.reviewMode = false;
+      _model.answerSelected = _model.selectedAnswers.isNotEmpty
+          ? _model.selectedAnswers[_model.questionIndex]
+          : null;
+      _model.correctAnswer = _model.answerSelected == null
+          ? null
+          : _model.answerSelected == _model.question?.correctAnswer;
       safeSetState(() {});
     });
 
@@ -62,6 +71,12 @@ class _TestWidgetState extends State<TestWidget> {
 
   @override
   Widget build(BuildContext context) {
+    final imagePath = _model.question?.image ?? '';
+    final resolvedImagePath = imagePath.isNotEmpty &&
+            !imagePath.startsWith('assets/images/')
+        ? 'assets/$imagePath'
+        : imagePath;
+    final imageHeroTag = 'question-image-${_model.questionIndex}';
     return Title(
         title: 'Test',
         color: FlutterFlowTheme.of(context).primary.withAlpha(0XFF),
@@ -284,10 +299,7 @@ class _TestWidgetState extends State<TestWidget> {
                                                           .fontStyle,
                                                 ),
                                           ),
-                                          if ((_model.question?.image ==
-                                                  'images/figura1.jpg') ||
-                                              (_model.question?.image ==
-                                                  'images/figura3.png'))
+                                          if (resolvedImagePath.isNotEmpty)
                                             Align(
                                               alignment: AlignmentDirectional(
                                                   0.0, 0.0),
@@ -313,11 +325,11 @@ class _TestWidgetState extends State<TestWidget> {
                                                         child:
                                                             FlutterFlowExpandedImageView(
                                                           image: Image.asset(
-                                                            'assets/images/img0.png',
+                                                            resolvedImagePath,
                                                             fit: BoxFit.contain,
                                                           ),
                                                           allowRotation: false,
-                                                          tag: 'imageF13Tag',
+                                                          tag: imageHeroTag,
                                                           useHeroAnimation:
                                                               true,
                                                         ),
@@ -325,7 +337,7 @@ class _TestWidgetState extends State<TestWidget> {
                                                     );
                                                   },
                                                   child: Hero(
-                                                    tag: 'imageF13Tag',
+                                                    tag: imageHeroTag,
                                                     transitionOnUserGestures:
                                                         true,
                                                     child: ClipRRect(
@@ -333,120 +345,7 @@ class _TestWidgetState extends State<TestWidget> {
                                                           BorderRadius.circular(
                                                               8.0),
                                                       child: Image.asset(
-                                                        'assets/images/img0.png',
-                                                        width: 400.0,
-                                                        height: 200.0,
-                                                        fit: BoxFit.contain,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                          if (_model.question?.image ==
-                                              'images/figura2.png')
-                                            Align(
-                                              alignment: AlignmentDirectional(
-                                                  0.0, 0.0),
-                                              child: Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        0.0, 20.0, 0.0, 0.0),
-                                                child: InkWell(
-                                                  splashColor:
-                                                      Colors.transparent,
-                                                  focusColor:
-                                                      Colors.transparent,
-                                                  hoverColor:
-                                                      Colors.transparent,
-                                                  highlightColor:
-                                                      Colors.transparent,
-                                                  onTap: () async {
-                                                    await Navigator.push(
-                                                      context,
-                                                      PageTransition(
-                                                        type: PageTransitionType
-                                                            .fade,
-                                                        child:
-                                                            FlutterFlowExpandedImageView(
-                                                          image: Image.asset(
-                                                            'assets/images/img1.png',
-                                                            fit: BoxFit.contain,
-                                                          ),
-                                                          allowRotation: false,
-                                                          tag: 'imageF2Tag',
-                                                          useHeroAnimation:
-                                                              true,
-                                                        ),
-                                                      ),
-                                                    );
-                                                  },
-                                                  child: Hero(
-                                                    tag: 'imageF2Tag',
-                                                    transitionOnUserGestures:
-                                                        true,
-                                                    child: ClipRRect(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              8.0),
-                                                      child: Image.asset(
-                                                        'assets/images/img1.png',
-                                                        width: 400.0,
-                                                        fit: BoxFit.contain,
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                          if (_model.question?.image ==
-                                              'images/figura4.png')
-                                            Align(
-                                              alignment: AlignmentDirectional(
-                                                  0.0, 0.0),
-                                              child: Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        0.0, 20.0, 0.0, 0.0),
-                                                child: InkWell(
-                                                  splashColor:
-                                                      Colors.transparent,
-                                                  focusColor:
-                                                      Colors.transparent,
-                                                  hoverColor:
-                                                      Colors.transparent,
-                                                  highlightColor:
-                                                      Colors.transparent,
-                                                  onTap: () async {
-                                                    await Navigator.push(
-                                                      context,
-                                                      PageTransition(
-                                                        type: PageTransitionType
-                                                            .fade,
-                                                        child:
-                                                            FlutterFlowExpandedImageView(
-                                                          image: Image.asset(
-                                                            'assets/images/img2.png',
-                                                            fit: BoxFit.contain,
-                                                          ),
-                                                          allowRotation: false,
-                                                          tag: 'imageF4Tag',
-                                                          useHeroAnimation:
-                                                              true,
-                                                        ),
-                                                      ),
-                                                    );
-                                                  },
-                                                  child: Hero(
-                                                    tag: 'imageF4Tag',
-                                                    transitionOnUserGestures:
-                                                        true,
-                                                    child: ClipRRect(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              8.0),
-                                                      child: Image.asset(
-                                                        'assets/images/img2.png',
+                                                        resolvedImagePath,
                                                         width: 400.0,
                                                         height: 200.0,
                                                         fit: BoxFit.contain,
@@ -493,29 +392,57 @@ class _TestWidgetState extends State<TestWidget> {
                                                       highlightColor:
                                                           Colors.transparent,
                                                       onTap: () async {
-                                                        if (_model
-                                                                .answerSelected ==
+                                                        if (_model.reviewMode) {
+                                                          return;
+                                                        }
+                                                        final prevSelected =
+                                                            (_model.selectedAnswers
+                                                                        .isNotEmpty)
+                                                                ? _model
+                                                                    .selectedAnswers[
+                                                                        _model
+                                                                            .questionIndex]
+                                                                : null;
+                                                        if (prevSelected !=
                                                             null) {
-                                                          if (answersIndex ==
+                                                          if (prevSelected ==
                                                               _model.question
                                                                   ?.correctAnswer) {
-                                                            _model.correctAnswer =
-                                                                true;
                                                             _model.nrCorrect =
                                                                 _model.nrCorrect +
-                                                                    1;
+                                                                    -1;
                                                           } else {
-                                                            _model.correctAnswer =
-                                                                false;
                                                             _model.nrWrong =
                                                                 _model.nrWrong +
-                                                                    1;
+                                                                    -1;
                                                           }
-
-                                                          _model.answerSelected =
-                                                              answersIndex;
-                                                          safeSetState(() {});
                                                         }
+                                                        final isCorrect =
+                                                            answersIndex ==
+                                                                _model.question
+                                                                    ?.correctAnswer;
+                                                        if (_model
+                                                            .selectedAnswers
+                                                            .isNotEmpty) {
+                                                          _model.selectedAnswers[
+                                                                  _model
+                                                                      .questionIndex] =
+                                                              answersIndex;
+                                                        }
+                                                        _model.answerSelected =
+                                                            answersIndex;
+                                                        _model.correctAnswer =
+                                                            isCorrect;
+                                                        if (isCorrect) {
+                                                          _model.nrCorrect =
+                                                              _model.nrCorrect +
+                                                                  1;
+                                                        } else {
+                                                          _model.nrWrong =
+                                                              _model.nrWrong +
+                                                                  1;
+                                                        }
+                                                        safeSetState(() {});
                                                       },
                                                       child: Container(
                                                         decoration:
@@ -629,19 +556,19 @@ class _TestWidgetState extends State<TestWidget> {
                                                 .questionsList
                                                 .elementAtOrNull(
                                                     _model.questionIndex);
-                                            _model.answerSelected = null;
-                                            safeSetState(() {});
-                                            if (_model.correctAnswer!) {
-                                              _model.nrCorrect =
-                                                  _model.nrCorrect + -1;
-                                              safeSetState(() {});
-                                            } else {
-                                              _model.nrWrong =
-                                                  _model.nrWrong + -1;
-                                              safeSetState(() {});
-                                            }
-
-                                            _model.correctAnswer = null;
+                                            final selected =
+                                                (_model.selectedAnswers
+                                                        .isNotEmpty)
+                                                    ? _model.selectedAnswers[
+                                                        _model.questionIndex]
+                                                    : null;
+                                            _model.answerSelected = selected;
+                                            _model.correctAnswer = selected ==
+                                                    null
+                                                ? null
+                                                : selected ==
+                                                    _model.question
+                                                        ?.correctAnswer;
                                             safeSetState(() {});
                                           },
                                           text: 'Back',
@@ -708,8 +635,19 @@ class _TestWidgetState extends State<TestWidget> {
                                                 .questionsList
                                                 .elementAtOrNull(
                                                     _model.questionIndex);
-                                            _model.answerSelected = null;
-                                            _model.correctAnswer = null;
+                                            final selected =
+                                                (_model.selectedAnswers
+                                                        .isNotEmpty)
+                                                    ? _model.selectedAnswers[
+                                                        _model.questionIndex]
+                                                    : null;
+                                            _model.answerSelected = selected;
+                                            _model.correctAnswer = selected ==
+                                                    null
+                                                ? null
+                                                : selected ==
+                                                    _model.question
+                                                        ?.correctAnswer;
                                             safeSetState(() {});
                                           },
                                           text: 'Next',
@@ -771,6 +709,59 @@ class _TestWidgetState extends State<TestWidget> {
                                       Expanded(
                                         child: FFButtonWidget(
                                           onPressed: () async {
+                                            if (_model.reviewMode) {
+                                              context.pop();
+                                              return;
+                                            }
+                                            final review = await showDialog<bool>(
+                                                  context: context,
+                                                  builder: (dialogContext) {
+                                                    return AlertDialog(
+                                                      title: Text('Review'),
+                                                      content: Text(
+                                                          'Vrei să revezi răspunsurile?'),
+                                                      actions: [
+                                                        TextButton(
+                                                          onPressed: () =>
+                                                              Navigator.pop(
+                                                                  dialogContext,
+                                                                  false),
+                                                          child: Text('Nu'),
+                                                        ),
+                                                        TextButton(
+                                                          onPressed: () =>
+                                                              Navigator.pop(
+                                                                  dialogContext,
+                                                                  true),
+                                                          child: Text('Da'),
+                                                        ),
+                                                      ],
+                                                    );
+                                                  },
+                                                ) ??
+                                                false;
+                                            if (review) {
+                                              _model.reviewMode = true;
+                                              _model.questionIndex = 0;
+                                              _model.question = _model
+                                                  .questionsList
+                                                  .elementAtOrNull(0);
+                                              final selected =
+                                                  (_model.selectedAnswers
+                                                          .isNotEmpty)
+                                                      ? _model
+                                                          .selectedAnswers[0]
+                                                      : null;
+                                              _model.answerSelected = selected;
+                                              _model.correctAnswer = selected ==
+                                                      null
+                                                  ? null
+                                                  : selected ==
+                                                      _model.question
+                                                          ?.correctAnswer;
+                                              safeSetState(() {});
+                                              return;
+                                            }
                                             context
                                                 .goNamed(HomeWidget.routeName);
 
