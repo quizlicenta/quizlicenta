@@ -1,0 +1,3648 @@
+{
+  "fundamentele_programării": [
+    {
+      "question": "În care dintre variantele de mai jos se declară un tablou unidimensional (vector) 𝑥 în care se pot memora cel mult 100 de numere reale?",
+      "answers": [
+        "x=float[100];",
+        "double x[100];",
+        "floating x[100];",
+        "real x(100);"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care dintre următoarele expresii logice este adevărată (are o valoare nenulă) dacă şi numai dacă numărul real memorat în variabila 𝑥 nu aparţine intervalului (0,5]?",
+      "answers": [
+        "(x<=0)||(x>5)",
+        "(x<=0)&&(x>5)",
+        "(x<0)||(x>=5)",
+        "(x<=0)&&(x>5)"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care dintre următoarele expresii este adevărată (are o valoare nenulă) dacă şi numai dacă numărul întreg memorat în variabila 𝑥 aparţine intervalului (1,6]?",
+      "answers": [
+        "(x>=1)||(x<6)",
+        "(x>1)||(x<=6)",
+        "(x>1)&&(x<6)",
+        "(x>1)&&(x<=6)"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "După executarea instrucțiunii float x = 27/5*2/3*7; ce valoare va fi memorată în variabila 𝑥?",
+      "answers": [
+        "25.2",
+        "21.0",
+        "6.3",
+        "7.0"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "După executarea instrucțiunii float x = 55/17*5/8+48/5/8*15; ce valoare va fi memorată în variabila 𝑥?",
+      "answers": [
+        "17.022058",
+        "17.0",
+        "16.0",
+        "21.219914"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care dintre următoarele secvenţe de instrucţiuni afişează valoarea 654, ştiind că 𝑠 şi 𝑖 sunt două variabile de tip întreg?",
+      "answers": [
+        "s=0; for(i=0;i<=654;i++) s++; printf(\"%d\",s);",
+        "s=651; while(s<=654) s++; printf(\"%d\",s);",
+        "for(i=1;i<=3;i++) printf(\"%d\",7-i);",
+        "s=7; while(s>=1) printf(\"%d\",s-1);"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care dintre următoarele secvenţe de instrucţiuni afişează valoarea 5432, ştiind că 𝑠 şi 𝑖 sunt două variabile de tip întreg?",
+      "answers": [
+        "s=0; for(i=0;i<=5432;i++) s++; printf(\"%d\",s);",
+        "s=5421; while(s<=5432) s++; printf(\"%d\",s);",
+        "for(i=1;i<4;i++) printf(\"%d\",6-i);",
+        "s=6; while(s>=3) printf(\"%d\",--s);"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care dintre următoarele secvenţe de instrucțiuni afişează câtul şi restul împărţirii numărului natural 𝑎 la numărul natural nenul 𝑏?",
+      "answers": [
+        "int t=0; while(a>=b) { a=a-b; t++; } printf(\"%d %d\",t,a);",
+        "int t=0; do { a=a-b; t++; }while(a>=b); printf(\"%d %d\",t,a);",
+        "int t=0; while(a!=b) { a=a-b; t++; } printf(\"%d %d\",t,b);",
+        "int t=0; while(a%b==0) { a=a-b; t++; } printf(\"%d %d\",t,a);"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Considerăm următorul program: #include <stdio.h> void sch(char a, char *b) { char aux; aux = a; a = *b; *b = aux; } int main() { char x = '1',y = '2'; sch(x,&y); printf(\"%c,%c\",x,y); return 0; } Ce valori se vor afişa pe ecran după executarea programului de mai sus?",
+      "answers": [
+        "1,2",
+        "2,1",
+        "1,1",
+        "2,2"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Considerăm următorul program: #include<stdio.h> void f(int a,int *b) { a++; *b=a; (*b)++; } void g(int *a,int b) { b++; *a=b; (*a)++; } int main() { int x=4, y=-2; f(x,&y); g(&x,y); printf(\"%d %d\",x,y); return 0; } Ce valori se vor afişa pe ecran după executarea programului de mai sus?",
+      "answers": [
+        "4 8",
+        "8 8",
+        "8 6",
+        "6 6"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Considerăm următoarea secvenţă de instrucțiuni: np=0; for(i=0;i<n;i++) if(…) np++; printf(\"%d\",np); Cu ce expresie dintre cele de mai jos trebuie înlocuite punctele de suspensie din secvenţa de instrucțiuni dată astfel încât aceasta să afişeze câte valori strict pozitive şi pare sunt în tabloul 𝑎, format din 𝑛 numere întregi?",
+      "answers": [
+        "(a[i]>0)&&(a[i]%2!=0)",
+        "(a[i]>0)&&(a[i]%2==0)",
+        "(a[i]>0)||(a[i]%2!=0)",
+        "(a[i]>=0)||(a[i]%2==0)"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care este valoarea expresiei strlen(\"programare\")+strcmp(\"test\",\"test\")?",
+      "answers": [
+        "10",
+        "14",
+        "18",
+        "\"programaretesttest\""
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Considerăm următoarea secvenţă de instrucțiuni: char s[100]; strcpy(s,\"\"); strcat(s,\"abcdefgh\"); strcpy(s+2,s+4); printf(\"%s %d\" ,s,strlen(s)); Ce se va afişa pe ecran după executarea secvenţei date?",
+      "answers": [
+        "adefgh 6",
+        "abefgh 6",
+        "abfgh 5",
+        "abefgh 8"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care din următoarele expresii de tip logic este adevărată (are o valoare nenulă) dacă şi numai dacă şirul de caractere 𝑠, de lungime 10, este obţinut prin concatenarea a două şiruri identice?",
+      "answers": [
+        "strcmp(s,s+5)==0",
+        "s==strstr(s,s+5)",
+        "s==s+5",
+        "strcmp(s,strcat(s,s+5))==0 6"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Considerăm următoarea secvenţă de instrucțiuni: char s[]=\"abcdabcd\",c = 'c'; char *p = strchr(s,c); printf(\"%d\",p - s); Ce se va afişa pe ecran după executarea secvenţei date?",
+      "answers": [
+        "cdabcd",
+        "6",
+        "cd",
+        "2"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Considerăm următoarea secvenţă de instrucțiuni: char s[20]; strcpy(s,\"abcdabcd\"); strncat(s,s+2,3); strcpy(s,s+4); printf(\"%d\",strlen(s)); Ce se va afişa pe ecran după executarea secvenţei date?",
+      "answers": [
+        "6",
+        "10",
+        "9",
+        "7"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Considerăm următoarea secvenţă de instrucțiuni: char s[20]; strncpy(s,\"abcdabcd\",6); s[6]='\\0'; strcat(s,s+4); strcpy(s+3,s+6); printf(\"%s\",s); Ce se va afişa pe ecran după executarea secvenţei date?",
+      "answers": [
+        "abcabab",
+        "abcdab",
+        "abcab",
+        "abcdabd"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Considerăm următoarele structuri: typedef struct { int zi,luna,an; }Data; typedef struct { char nume[30]; Data *data_nasterii; float media; }Student; Știind că variabila st este de tip Student*, indicați instrucţiunea de mai jos prin care anul naşterii studentului respectiv primește valoarea 1990:",
+      "answers": [
+        "st->data_nasterii->an=1990;",
+        "st.data_nasterii.an=1990;",
+        "st.data_nasterii->an=1990;",
+        "st->data_nasterii.an=1990;"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Considerăm tipul de date Punct, capabil să memoreze abscisa şi ordonata unui punct din plan, şi tipul de date Segment, capabil să memoreze două puncte reprezentând extremităţile unui segment din plan, definite astfel: typedef struct { float x,y; }Punct; typedef struct { Punct A,B; }Segment; Care dintre următoarele expresii are o valoare nenulă dacă şi numai dacă variabila 𝑠 de tip Segment memorează informații despre un segment vertical (aflat pe axa Oy sau paralel cu axa Oy)?",
+      "answers": [
+        "s.A == s.B",
+        "s.x == s.y",
+        "A.x == B.x",
+        "s.A.x == s.B.x"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Considerăm funcția int suma(int x,int y) care returnează suma numerelor întregi x și y, precum și funcția int prod(int x,int y) care returnează produsul numerelor întregi x și y. Știind că a, b și c sunt 3 variabile de tip întreg, care dintre expresiile de mai jos atribuie variabilei t de tip întreg valoarea expresiei (a+b)*(a+c)+b*c?",
+      "answers": [
+        "t = prod(suma(a,b),suma(a,c),prod(b,c));",
+        "t = suma(prod(suma(a,b),suma(a,c)),suma(b,c));",
+        "t = prod(suma(a,b),suma(a,c)+suma(b,c));",
+        "t = suma(prod(suma(a,b),suma(a,c)),prod(b,c));"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Considerăm funcția int suma(int x,int y) care returnează suma numerelor întregi x și y, precum și funcția int prod(int x,int y) care returnează produsul numerelor întregi x și y. Știind că a, b și c sunt 3 variabile de tip întreg, care dintre expresiile de mai jos atribuie variabilei t de tip întreg valoarea expresiei a*b+a*b*c?",
+      "answers": [
+        "t = suma(prod(a,b),prod(a,b+c));",
+        "t = suma(prod(a,b),prod(a,b,c));",
+        "t = suma(prod(a,b),prod(a,b,c));",
+        "t = prod(prod(a,b),suma(1,c));"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care dintre următoarele funcții poate fi folosită într-un program pentru a citi de la tastatură un tablou unidimensional format din numere întregi?",
+      "answers": [
+        "void citire(int v[],int n) { scanf(\"%d\",&n); for(int i=0;i<n;i++) scanf(\"%d\",&v[i]); }",
+        "void citire(int *v[],int *n) { scanf(\"%d\",n); for(int i=0;i<*n;i++) scanf(\"%d\",&v[i]); }",
+        "void citire(int *v[],int *n) { scanf(\"%d\",&n); for(int i=0;i<n;i++) scanf(\"%d\",&v[i]); }",
+        "void citire(int *v,int *n) { scanf(\"%d\",n); for(int i=0;i<*n;i++) scanf(\"%d\",v+i); }"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Funcția minmax primește prin parametrul de intrare v un tablou unidimensional format din numere întregi, iar prin parametrul de intrare n primește numărul de elemente ale tabloului v. Funcția trebuie să întoarcă prin doi parametri de ieșire, min și max, valoarea minimă și, respectiv, valoarea maximă din tabloul v. Care dintre următoarele variante reprezintă un antet corect al funcției minmax?",
+      "answers": [
+        "void minmax(int v[],int n,int min,int max)",
+        "int minmax(int v[],int n,int min,int max)",
+        "void minmax(int v[],int n,int *min,int *max)",
+        "void minmax(int *v[],int *n,int *min,int *max)"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fie v un tablou unidimensional format din 100 de numere reale de tip double și numărul natural k cuprins între 0 și 99. Care dintre următoarele expresii afișează adresa elementului v[k]?",
+      "answers": [
+        "printf(\"%p\\n\",v+k);",
+        "printf(\"%p\\n\",&v[99]+k-99);",
+        "printf(\"%p\\n\",v+k*sizeof(double));",
+        "printf(\"%p\\n\",&v[k]);"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care dintre următoarele secvențe de cod poate fi utilizată pentru a aloca dinamic un tablou unidimensional 𝑎 format din 100 de numere întregi?",
+      "answers": [
+        "int *a = (int *)malloc(100);",
+        "int *a = (int *)malloc(100*sizeof(int));",
+        "int *a = (int *)malloc(100, sizeof(int));",
+        "int *a = (int *)calloc(100*sizeof(int));"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care dintre următoarele secvențe de cod poate fi utilizată pentru a aloca dinamic un tablou bidimensional 𝑎 format din 10 de linii și 20 de coloane de numere întregi?",
+      "answers": [
+        "int **a = (int **)malloc(10); for(int i=0;i<10;i++) a[i]=(int *)malloc(20);",
+        "int **a = (int **)calloc(10*sizeof(int *),20*sizeof(int));",
+        "int *a = (int *)malloc(20*sizeof(int *)); for(int i=0;i<20;i++) a[i]=(int *)malloc(10*sizeof(int));",
+        "int **a = (int **)calloc(10,sizeof(int*)); for(int i=0;i<10;i++) a[i]=(int *)calloc(20,sizeof(int));"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fie 𝑎 un tabloul bidimensional pătratic de dimensiune 𝑛. Care dintre următoarele secvențe de cod afișează elementele aflate pe diagonala principală a matricei 𝑎?",
+      "answers": [
+        "for(int i=0;i<n;i++) for(int j=0;j<n;j++) if(i==j) printf(\"%d \",a[i][j]);",
+        "for(int i=0;i<n;i++) printf(\"%d \",a[i,i]);",
+        "for(int i=0;i<n;i++) for(int j=0;j<n;j++) if(i+j==n-1) printf(\"%d \",a[i][j]);",
+        "for(int i=0;i<n;i++) printf(\"%d \",a[i][n-i-1]);"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fie 𝑎 un tabloul bidimensional pătratic de dimensiune 𝑛. Care dintre următoarele secvențe de cod afișează elementele triunghiului delimitat de prima coloană, diagonala principală și ultima linie din matricea 𝑎?",
+      "answers": [
+        "for(int i=0;i<n;i++) for(int j=0;j<n;j++) if(i>=j) printf(\"%d \",a[i][j]);",
+        "for(int i=0;i<n;i++) for(int j=0;j<n;j++) if(i<=j) printf(\"%d \",a[i][j]);",
+        "for(int i=0;i<n;i++) for(int j=0;j<i;j++) printf(\"%d \",a[i][j]);",
+        "for(int i=0;i<n;i++) for(int j=i;j<n;j++) printf(\"%d \",a[i][j]);"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fie 𝑎 un tabloul bidimensional pătratic de dimensiune 𝑛. Care dintre următoarele secvențe de cod afișează elementele triunghiului delimitat de diagonala principală, ultima coloană și prima linie din matricea 𝑎?",
+      "answers": [
+        "for(int i=0;i<n;i++) for(int j=0;j<n;j++) if(i>=j) printf(\"%d \",a[i][j]);",
+        "for(int i=0;i<n;i++) for(int j=0;j<n;j++) if(i<j) printf(\"%d \",a[i][j]);",
+        "for(int i=0;i<n;i++) for(int j=0;j<=i;j++) printf(\"%d \",a[i][j]);",
+        "for(int i=0;i<n;i++) for(int j=i;j<n;j++) printf(\"%d \",a[i][j]);"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care dintre următoarele funcții returnează numărul de linii dintr-un fișier text a cărui cale este transmisă prin parametrul de intrare 𝑛𝑓 (se presupune că fișierul nu conține linii vide)?",
+      "answers": [
+        "int nr(char *nf) { char s[1001]; FILE *f=fopen(nf,\"r\"); int n=0; while(fscanf(f,\"%s\",s)==1) n++; fclose(f); return n; }",
+        "int nr(char *nf) { char c; FILE *f=fopen(nf,\"r\"); int n=0; while(fscanf(f,\"%c\",&c)==1) if(c=='\\n') n++; fclose(f); return n; }",
+        "int nr(char *nf) { FILE *f=fopen(nf,\"r\"); int n=sizeof(f); fclose (f); return n/sizeof(char *); }",
+        "int nr(char *nf) { char s[1001]; FILE *f=fopen(nf,\"r\"); int n=0; while(fgets(s,1000,f)) n++; fclose (f); 16"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Considerăm următorul program: #include<stdio.h> #include<string.h> int main() { FILE *f=fopen(\"test.txt\",\"r\"); char s[101],t[101]; while(fgets(s,100,f)) strcpy(t,s); printf(\"%s\",t); fclose(f); return 0; } Știind ca lungimea maximă a unei linii din fișierul text test.txt este de 100 de caractere, ce se va afișa după executarea programului de mai sus?",
+      "answers": [
+        "fiecare linie din fișier;",
+        "penultima linie din fișier;",
+        "ultimul caracter din fișier;",
+        "ultima linie din fișier."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care dintre următoarele secvențe de cod afișează pe ecran șirul de numere 1 2 2 3 3 3 4 4 4 4 5 5 5 5 5?",
+      "answers": [
+        "for(int i=1;i<=5;i++) for(int j=1;j<=5;j++) printf(\"%d\",i);",
+        "for(int i=1;i<=5;i++) for(int j=1;j<=i;j++) printf(\"%d\",i);",
+        "for(int i=1;i<=5;i++) for(int j=1;j<=i;j++) printf(\"%d\",j);",
+        "for(int i=1;i<=4;i++) for(int j=i+1;j<=5;j++) printf(\"%d\",i);"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Stabiliți care dintre următoarele funcții întorc poziția primei valori strict pozitive din tabloul 𝑣 format din 𝑛 numere întregi sau -1 dacă tabloul nu conține nici un număr pozitiv:",
+      "answers": [
+        "int p(int v[],int n) { int i,x=-1; for(i=0;i<n;i++) if(v[i]>0) x=i; return x; }",
+        "int p(int v[],int n) { int x=0; while(v[x]<=0) x++; return x-1; }",
+        "int p(int v[],int n) { int i,x=-1; for(i=0;i<n;i++) if((v[i]>0)&&(x<0)) x=i; return x; }",
+        "int p(int v[],int n) { int i; for(int i=0;i<n;i++) if (v[i]>0) return i; 18"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Considerăm următoarea secvență de cod: int a, b, p=1; scanf(\"%d %d\", &a, &b); while(p < a) p = p*2; while(p <= b) { printf(\"%d\\n\", p); p = p*2; } Dacă valorile introduse pentru variabilele a și b vor fi două numere naturale nenule cu proprietatea că a < b, atunci pe ecran se vor afișa:",
+      "answers": [
+        "toate puterile lui 2 din intervalul [a,b];",
+        "toate puterile lui 2 din intervalul (a,b];",
+        "toate numerele pare din intervalul [a,b];",
+        "toate numerele pare din intervalul (a,b];"
+      ],
+      "correct_answer": null
+    }
+  ],
+  "programare_în_python": [
+    {
+      "question": "Care dintre următoarele colecții de date din limbajul Python este imutabilă?",
+      "answers": [
+        "listă",
+        "tuplu",
+        "mulțime",
+        "dicționar"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Pentru ca instrucțiunea Python del t[1:4] să nu producă o eroare în momentul executării sale, variabila t trebuie să fie inițializată prin:",
+      "answers": [
+        "t = (1, 2, 3, 4, 5)",
+        "t = \"12345\"",
+        "t = {1, 2, 3, 4, 5}",
+        "t = [1, 2, 3, 4, 5]"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Pentru ca instrucțiunea Python t[1]=7 să nu producă o eroare în momentul executării sale, variabila t trebuie să fie inițializată prin:",
+      "answers": [
+        "t = (1, 2, 3, 4, 5)",
+        "t = []",
+        "t = {1, 2, 3, 4, 5}",
+        "t = {1:1, 2:2}"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care dintre următoarele expresii logice scrise în limbajul Python este adevărată dacă şi numai dacă numărul natural memorat în variabila 𝑥 este par și nu aparţine intervalului (10,20]?",
+      "answers": [
+        "x <= 10 or x > 20 and x % 2 == 0",
+        "x <= 10 or x > 20 or x % 2 == 0",
+        "x <= 10 and x > 20 and x % 2 == 0",
+        "x < 10 or x >= 20 and x % 2 == 0"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Considerăm următoarele 5 expresii scrise în limbajul Python: (a+b)/2==m, (a+b)//2==m, a+b==2*m, (b-a)/2==m–a și a//2==m-b//2. Câte dintre ele sunt adevărate dacă şi numai dacă numărul real 𝑚 este egal cu media aritmetică a numerelor întregi 𝑎 și 𝑏?",
+      "answers": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care este valoarea expresiei 2024//7/5*100/5//7, scrisă în limbajul Python?",
+      "answers": [
+        "165.22448979591840",
+        "162.85714285714286",
+        "162.0",
+        "165.0 1"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care este valoarea expresiei 2**4*4**2//4**4*2**2, scrisă în limbajul Python?",
+      "answers": [
+        "4",
+        "64",
+        "0",
+        "8192"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Se consideră următoarea secvenţă de instrucțiuni Python: t, a, b = 0, 2025, 9 while a > b: a, t = a-b, t+1 print(t, a) Ce valori vor fi afișate pe ecran după executarea secvenței de mai sus?",
+      "answers": [
+        "225 9",
+        "224 0",
+        "225 0",
+        "224 9"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care dintre următoarele secvenţe de instrucţiuni Python nu afişează valoarea 4210?",
+      "answers": [
+        "s = 0 for i in range(4210): s += 1 print(s)",
+        "s = 4201 while s <= 4210: s += 1 print(s)",
+        "s = 9 for i in range(4): s = s // 2 print(s, end=\"\")",
+        "L = [str(x*2) if x < 3 else '1' for x in range(4)] L.sort(reverse=True) print(\"\".join(L))"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Considerăm următoarea secvenţă de instrucțiuni Python: s = 0 while n > 0: if n % 10 > s: s = n % 10 else: break n = n // 10 else: s = 10 print(s) Ce valoare se va afişa după executarea secvenţei de mai sus pentru 𝑛 = 75521?",
+      "answers": [
+        "1",
+        "5",
+        "7",
+        "10"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Considerăm următoarea secvenţă de instrucțiuni Python: x, y, t = 0, 1, 10 while t > 0: x, y, t = y, x+y, t-1 print(x, y) Ce valori se vor afişa după executarea secvenţei de mai sus?",
+      "answers": [
+        "89 55",
+        "55 144",
+        "89 144",
+        "55 89 3"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Dacă s=\"restaurare\" și t=\"orchestrare\", atunci valoarea expresiei s.find(t[4:7]) + t.find(s[-4:-1]) este egală cu:",
+      "answers": [
+        "8",
+        "-2",
+        "0",
+        "6"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fie 𝑠 un șir de caractere format din exact 10 litere mici din alfabetul englez și următoarele 4 expresii de tip logic, scrise în limbajul Python: s[:5]*2==s, s.index(s[5:])==0, s[:5]==s[5:] și s.startswith(s[5:])+s.endswith(s[:5])==2. Câte dintre cele 4 expresii sunt adevărate dacă și numai dacă șirul 𝑠 se poate obține prin concatenarea a două șiruri identice de lungime 5?",
+      "answers": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Considerăm următoarea secvenţă de instrucțiuni Python: t = set([x for x in range(0, 21, 2)] * 2) u = [x for x in range(0, 31, 3)] * 3 t = t.intersection(u) t.update(tuple(u)) print(len(t)) Ce se va afişa pe ecran după executarea secvenţei date?",
+      "answers": [
+        "5",
+        "11",
+        "26",
+        "37"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fie s și t două șiruri de caractere. Care este efectul instrucțiunii s, t = (t, s)[::-1]?",
+      "answers": [
+        "șirurile s și t nu vor fi modificate",
+        "șirurile s și t vor fi interschimbate",
+        "eroare, deoarece șirurile de caractere sunt imutabile",
+        "șirul s va fi înlocuit cu oglinditul șirului t, iar șirul t cu oglinditul șirului s (oglinditul unui șir se obține parcurgând șirul de la sfârșit spre început)"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Considerăm următorul program Python: s = \"101,Popescu,Ion,Mihai,9.50\" x, *y, z = s.split(\",\") print(x, y, z, sep=\" -> \") Ce se va afişa pe ecran după executarea programului dat?",
+      "answers": [
+        "101 -> 'PopescuIonMihai' -> 9.50",
+        "101 -> 'Popescu,Ion,Mihai' -> 9.50",
+        "101 -> ['Popescu', 'Ion', 'Mihai'] -> 9.50",
+        "101 -> 9.50"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Considerăm următorul program Python: s = \"Ana are mere si pere verzi\" t = \"\" while True: x, *y, z = s.split() t += \" \".join([x, z]) + \" \" if len(y) == 0: break s = \" \".join(y) print(t) Ce se va afişa pe ecran după executarea programului dat?",
+      "answers": [
+        "Ana are verzi mere si pere",
+        "Ana verzi are pere mere si",
+        "Ana verzi pere are si mere",
+        "Ana are si mere verzi pere"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care dintre următoarele afirmații referitoare la un dicționar din limbajul Python este adevărată?",
+      "answers": [
+        "toate cheile unui dicționar trebuie să fie de același tip de date",
+        "cheile dintr-un dicționar pot fi de orice tip de date, inclusiv alte dicționare",
+        "dicționarele sunt imutabile",
+        "valorile dintr-un dicționar nu se accesează folosind indecșii lor 10"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fie lista L = [10, [3.14, True, [20, \"test\", 2.71]], \"usor\"]. Care dintre următoarele expresii poate fi utilizată pentru a elimina cuvântul \"test\" din lista L?",
+      "answers": [
+        "L[1][2][1:2] = []",
+        "del L[1][2][2]",
+        "L[1][2].pop()",
+        "L[1][2][1] = \"\""
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Ce se va afișa după rularea programului Python de mai jos? d = {} for i in range(2): for j in range(3): d[i], d[j] = j, i print(d)",
+      "answers": [
+        "{0: 0, 1: 1, 2: 2}",
+        "{0: 1, 1: 2, 2: 1}",
+        "{0: 2, 1: 2, 2: 1}",
+        "{0: 2, 1: 2, 2: 2}"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fie următoarea funcție scrisă în limbajul Python: def f(x, y): return x-y, x+y Dacă a și b sunt două variabile de tip numeric, atunci după executarea secvenței de instrucțiuni t = f(a, b) print(t[1]-t[0]) întotdeauna se va afișa:",
+      "answers": [
+        "dublul valorii numărului a",
+        "dublul valorii numărului b",
+        "șirul de caractere obținut prin alipirea diferenței și sumei numerelor a și b",
+        "o eroare, deoarece funcția returnează două valori care nu pot fi stocate într-o singură variabilă"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care dintre următoarele structuri de date poate fi utilizată pentru cheile unui dicționar?",
+      "answers": [
+        "un tuplu de liste",
+        "o listă de tupluri",
+        "un tuplu de tupluri",
+        "o mulțime de tupluri"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Produsele dintr-un magazin online sunt caracterizate prin categorie, denumire, cantitate și preț unitar. De exemplu, un televizor se poate caracteriza prin următoarele informații: \"Audiovideo\", \"Televizor Philips 32PHS6605/12\", 10, 1500 RON. Care dintre următoarele structuri de date din limbajul Python permite actualizarea eficientă a cantității și prețului unitar pentru un anumit produs?",
+      "answers": [
+        "o listă cu tupluri de forma (categorie, denumire, cantitate și preț unitar)",
+        "un dicționar cu intrări de forma categorie: {denumire: [cantitate, preț unitar]}",
+        "o listă cu șiruri de caractere de forma \"categorie, denumire, cantitate și preț unitar\"",
+        "un dicționar cu intrări de forma categorie: {denumire: (cantitate, preț unitar)}"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Considerăm următorul program Python: f = open(\"exemplu.txt\") p = len(f.readline()) q = len(f.readlines()) r = len(f.read()) f.close() print(p + q + r) Dacă fișierul text \"exemplu.txt\" are conținutul Ana are mere si pere multe! atunci, după rularea programului de mai sus, se va afișa:",
+      "answers": [
+        "37",
+        "27",
+        "17",
+        "9"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Considerăm următorul program Python: f = open(\"numere.txt\") r = set() for aux in f: s = sum([int(x) for x in aux.split()]) r.add(s) print(*sorted(r)) f.close() Dacă fișierul text \"numere.txt\" are conținutul 20 -10 10 10 10 10 20 10 20 20 -20 30 50 50 -80 70 -20 atunci, după rularea programului de mai sus, se va afișa:",
+      "answers": [
+        "20 20 50 50 60",
+        "20 20 50 60",
+        "20 50 60",
+        "130"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Ce se va afișa pe ecran după executarea programului Python de mai jos? def f(a=2, b=3): return a + b print(f(f(7)))",
+      "answers": [
+        "11",
+        "12",
+        "13",
+        "o eroare, deoarece apelul funcției f conține un singur parametru efectiv"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Ce se va afișa pe ecran după executarea programului Python de mai jos? def f(a=10, b=20): return a + b print(f(f(30),f(50)))",
+      "answers": [
+        "60",
+        "80",
+        "100",
+        "120"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Ce se va afișa pe ecran după executarea programului de mai jos? def f(lst): del lst[lst[2]] return lst L = [x * x for x in range(5)] print(f(L))",
+      "answers": [
+        "[0, 1, 9, 16]",
+        "[0, 1, 4, 9]",
+        "[0, 1, 4, 16]",
+        "[1, 4, 9, 16]"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fie următorul program scris în limbajul Python: def f(x, y): return x & y, x | y t = f(0b101101, 0b111000) print(bin(t[1] ^ t[0])) După executarea programului de mai sus, pe ecran se va afișa:",
+      "answers": [
+        "0b10101",
+        "0b11100",
+        "0b101010",
+        "0b111101 15"
+      ],
+      "correct_answer": null
+    }
+  ],
+  "l_=_[0,_1,_2]": [
+    {
+      "question": "Considerăm o listă nevidă 𝐿 ale cărei elemente sunt liste nevide de numere întregi (de exemplu, 𝐿 = [[10, 70, −100], [50], [1, 100, 70]). Care dintre următoarele expresii Python nu atribuie variabilei de tip întreg 𝑙𝑚𝑎𝑥 cel mai mare număr care apare în sublistele listei 𝐿 (pentru exemplul dat anterior acesta este 100)?",
+      "answers": [
+        "lmax = max(L)",
+        "lmax = max([max(r) for r in L])",
+        "lmax = max([sorted(r)[-1] for r in L])",
+        "lmax = max([x for r in L for x in r])"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Considerăm următoarea secvenţă de instrucțiuni Python: s = input() while len(s) > 0: s = s.replace(s[0], \"\") print(s) Pentru orice șir format doar din caractere ASCII introdus de la tastatură programul va afișa:",
+      "answers": [
+        "prima literă din șirul introdus de la tastatură",
+        "ultima literă din șirul introdus de la tastatură",
+        "șirul vid",
+        "șirul introdus de la tastatură fără prima literă"
+      ],
+      "correct_answer": null
+    }
+  ],
+  "l[3:]_=_l[7:]": [
+    {
+      "question": "Care dintre următoarele secvențe de inițializare nu va produce o listă 𝐿 formată doar din numere naturale pare?",
+      "answers": [
+        "L = [x ** 2 for x in range(0, 21, 2)]",
+        "L = [x // 2 for x in range(0, 21, 4)]",
+        "L = [x // 2 for x in range(0, 21, 2)]",
+        "L = [x * 3 for x in range(20, 0, -2)] 7"
+      ],
+      "correct_answer": null
+    }
+  ],
+  "programare_orientată_pe_obiecte_c++": [
+    {
+      "question": "Fie secvența în limbajul C++: class cls{ public: cls(){ cout<<\"constructor\";} cls(cls &c){cout<<\"constructor de copiere\";} }; int f(cls c){ return 1;} int main(){ cls c; f(c); return 0; } În momentul executării programului de mai sus:",
+      "answers": [
+        "constructorul de clasă se apelează o dată, iar cel de copiere nu se apelează;",
+        "constructorul de clasă şi cel de copiere se apelează fiecare câte o dată;",
+        "constructorul de copiere se apelează o dată, iar cel de clasă nu se apelează;",
+        "constructorul de clasă se apelează de două ori, iar cel de copiere nicio dată;"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fie secvența în limbajul C++: class cls{ public: cls(){ cout<<\"constructor\";} cls(cls &c){cout<<\"constructor de copiere\";} }; int f(cls &c){ return 1;} int main(){ cls c; f(c); return 0; } În momentul executării programului de mai sus:",
+      "answers": [
+        "constructorul clasei se apelează o dată, iar cel de copiere nu se apelează nicio dată;",
+        "constructorul de clasă şi cel de copiere se apelează fiecare câte o dată;",
+        "constructorul de copiere se apelează o dată, iar cel de clasă nu se apelează;",
+        "constructorul clasei se apelează de două ori, iar cel de copiere nicio dată;"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fie clasa C++: class c { int a, b ; public : c (int , int ) ; int det_a ( ) {return a ;} ~c () ; }; Semnul ~ are rolul :",
+      "answers": [
+        "de a nega pe biți rezultatul returnat de metoda c( );",
+        "de a preciza existența destructorului;",
+        "de a nega logic rezultatul returnat de metoda c( );",
+        "de a supraîncarca constructorul clasei;"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Polimorfismul dinamic în limbajul C++ se realizează cu ajutorul:",
+      "answers": [
+        "datelor si metodelor membre statice",
+        "nu se poate realiza polimorfismul dinamic în limbajul C++",
+        "claselor derivate",
+        "pointerilor și a funcțiilor virtuale"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fie următorul program C++: #include <iostream.h> class B{ public: B(){cout<<\"B()\"<<endl;} ~B(){cout<<\"~B()\"<<endl;} }; class D: public B{ public: D(){cout<<\"D()\"<<endl;} ~D(){cout<<\"~D()\"<<endl;} }; int main(){ B *b=new B(); delete b; b=new D(); delete b; return 0; } Programul afișează:",
+      "answers": [
+        "B() ~B() B() D() ~D()",
+        "B() ~B() B() D() ~B()",
+        "B() ~B() B() ~B()",
+        "B() ~B() D() ~B()"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fie clasa C++ : class c { int a,b; public: float c (int, int) int get_a {return a;} c (); }; Declaraţia float c(int, int) ar putea corespunde unui constructor al clasei?",
+      "answers": [
+        "da, fiind o supraîncarcare a celui existent;",
+        "nu, deoarece crează ambiguitate;",
+        "nu, deoarece constructorul nu are tip returnat;",
+        "nu, deoarece nu este de tip friend."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fie secvenţa următoare: class persoana{ int varsta; public: persoana(int v=18){varsta=v;} persoana& operator++(int){varsta++; return *this;} int get_varsta(){return varsta;} }; int main(){ persoana p(20); cout<<p++.get_varsta(); return 0; } Secvența afișează:",
+      "answers": [
+        "21",
+        "20",
+        "18",
+        "19"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fie următorul program C++: #include<iostream.h> class cls { static int i; int j; public: cls(int x=7) { j=x; } static int imp(int k){ cls a; return i+k+a.j; } }; int cls::i; int main() { int k=5; cout<<cls::imp(k); return 0; } Indicați ce se va afișa pe ecran în urma executării programului:",
+      "answers": [
+        "11",
+        "13",
+        "12",
+        "14"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fie următorul program C++: #include <iostream.h> class B{ public: virtual void f() { cout<<\"B::f() \";} void g() { cout<<\"B::g() \";} }; class D1: public B{ public: void f() { cout<<\"D1::f() \";} void g() { cout<<\"D1::g() \";} }; class D2: public B{ public: void g() { cout<<\"D2::g() \";} }; int main(){ int i; B *a=new B(); B *b=new D1(); B *c=new D2(); a->f(); b->f(); c->f(); a->g(); b->g(); c->g(); return 0; } Indicați ce se va afișa pe ecran în urma executării programului:",
+      "answers": [
+        "B::f() D1::f() B::f() B::g() B::g() B::g()",
+        "D2::f() D1::f() B::f() B::g() B::g() B::g()",
+        "B::f() D1::f() D::f() B::g() D1::g() D2::g()",
+        "B::f() D1::f() B::f() B::g() D1::g() D2::g()"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fie următorul program C++: #include class cls{ public: ~cls(){cout<<\"\\n Destructor\";} }; int main(){ cls *po=new cls[3]; delete []po; }] Destructorul clasei:",
+      "answers": [
+        "nu se apelează nicio dată;",
+        "se apelează o dată;",
+        "se apelează de trei ori;",
+        "se apelează de patru ori."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fie următorul program C++: #include <iostream.h> class Cerc{ public: float raza; Cerc(float r){raza=r;} float get_raza(){return raza;} Cerc operator++(){raza++; return *this;} Cerc operator--(){raza--; return *this;} }; int main(){ Cerc c(3.5); cout<<(++(++c)).get_raza()<<\" \"; cout<<c.get_raza()<<\" \"; cout<<(--(--c)).get_raza()<<\" \"; cout<<c.get_raza()<<\" \"; return 0; } Programul afișează:",
+      "answers": [
+        "3.5 4.5 2.5 3.5",
+        "5.5 4.5 2.5 2.5",
+        "2.5 5.5 4.5 3.5",
+        "5.5 4.5 2.5 3.5"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fie secvența C++: class complex{ double re; double im; public: complex(double x=1.0,double y=6.80){re=x; im=y;} complex( const complex &u){re=u.re;im=u.im;} }; Precizaţi în ce situaţie se utilizează constructorul de copiere:",
+      "answers": [
+        "complex z1(5.2, 3.6);",
+        "complex z1(5.2, 3.6), z2=z1;",
+        "complex z3(0.1,1.0);",
+        "complex z5(-0.1,28.7)."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fie programul C++: #include <iostream.h> class Cerc{ float raza; public: Cerc(float r){raza=r;} float get_raza(){return raza;} void operator++(){raza++;} }; class Cilindru : public Cerc{ float inaltime; public: Cilindru(float raza, float i):Cerc(raza){inaltime=i;} void operator++(){inaltime++;} float get_inaltime(){return inaltime;} }; int main(){ Cerc *pc; Cilindru c(2,6); pc=&c; ++ *pc; cout<<pc->get_raza()<<\" \"<<c.get_inaltime()<<endl; return 0; } Programul afișează:",
+      "answers": [
+        "2",
+        "2",
+        "3",
+        "2 5 6 6 5"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fie programul C++: class c{ int a; public: c(){}; c(const c&){}; void operator=(c&){}; }; int main(){ c a; c b=a; } Linia de cod c b=a; determină:",
+      "answers": [
+        "executarea constructorului de copiere;",
+        "executarea metodei prin care se supraîncărcă operatorul =;",
+        "executarea atât a constructorului de copiere, cât și a metodei operator =;",
+        "o eroare, deoarece nu este permisă combinarea atribuirii cu o declarație;"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fie următorul program C++: #include<iostream.h> class cls{ public: ~cls(){cout<<\"\\n Destructor\";} }; int main(){ cls *po=new cls[3]; delete []po; } Destructorul clasei:",
+      "answers": [
+        "nu se apelează nicio dată;",
+        "se apelează o dată;",
+        "se apelează de trei ori;",
+        "se apelează de patru ori."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "O funcție independentă declarată friend în domeniul public dintr-o clasă C++ și care primește ca parametru o referință la un obiect al clasei respective are acces:",
+      "answers": [
+        "doar la membrii declarați public;",
+        "la toți membrii;",
+        "la membrii public și la cei protected;",
+        "la membrii protected. 10"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fie următorul program C++: #include<iostream.h> class A{ int a[3]; public: A(int i, int j, int k){a[0]=i; a[1]=j; a[2]=k;} int& operator[](int i){return a[i];} }; int main(){ A ob(1,2,3); cout<<ob[1]; ob[1]=25; cout<<ob[1]; return 0; } Ce se poate afirma despre operator[]()?",
+      "answers": [
+        "produce supraîncărcarea unei funcţii;",
+        "produce supraîncărcarea unui operator unar;",
+        "supraîncarcă operatorul [];",
+        "este o funcţie membru oarecare a clasei A, care nu produce supraîncărcarea unui operator;"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Considerăm următorul program C++: #include<iostream.h> class C{ public: int x; C(int v) { x=v;} double operator+(C &c, double d){return c.x+d;} double operator+(double d, C &c){return c.x+d;} }; int main() { C c(5); cout<<2+c+3; return 0; } Stabiliți care dintre următoarele afirmații sunt adevărate:",
+      "answers": [
+        "supraîncărcările operator + () trebuie să fie friend;",
+        "supraîncărcările operator+() nu se justifică deoarece au același cod;",
+        "programul afișează 10;",
+        "supraîncărcările operator+() trebuie să returneze referințe."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fie programul următor C++: #include<iostream.h> class B{ int x; public: B(int i=10) { x=i;} int get_x() { return x; } }; class D: public B{ public: D(int i):B(i){} D operator+(const D& a) {return x+a.x; } }; int main(){ D ob1(7), ob2(-12); cout<<(ob1+ob2).get_x(); return 0; } Programul afișează:",
+      "answers": [
+        "eroare, clasa B nu poate fi moștenită de clasa D;",
+        "eroare, metoda operator nu are acces la un membru privat al clasei de bază;",
+        "programul afișează valoarea -5;",
+        "eroare, operatorul + nu se poate aplica pentru tipuri abstracte de date."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Considerăm următorul program C++: class vector{ int * pe, nr_c; public: operator int (){return nr_c;} vector(int); }; vector::vector(int n){ pe=new int[n]; nr_c=n; while(n--) pe[n]=n; } void f(int i){cout<<i<<endl;} int main(){ vector x(10); f(x); return 0; } Programul afişează:",
+      "answers": [
+        "9",
+        "10",
+        "numerele de la 1 la 10",
+        "numerele de la 0 la 9"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Considerăm următorul program C++: class c{ int a; public: virtual void metoda1()=0; virtual void metoda2(int)=0; }; int main{ c *pob; //declaraţia 1 c ob; //declaraţia 2 c *vpob[3]; //declaraţia 3 c vob[3]; //declaraţia 4 return 0; } Declaraţiile admise:",
+      "answers": [
+        "1+2;",
+        "1+2+3+4",
+        "nici una",
+        "1+3;"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "clasa M2 va moşteni două obiecte de tip B. Precizaţi care dintre afirmaţiile de mai sus sunt corecte:",
+      "answers": [
+        "2+3",
+        "1+2",
+        "1+3",
+        "2+4"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fie următorul program C++: #include<iostream.h> class B{ public: int x; B(int i=16) { x=i; } B f(B ob) { return x+ob.x; } }; class D: public B{ public: D(int i=25) { x=i; } B f(B ob) { return x+ob.x+1; } void afisare(){ cout<<x; } }; int main(){ B *p1=new D, *p2=new B, *p3=new B(p1->f(*p2)); cout<<p3->x; return 0; } Programul afişează:",
+      "answers": [
+        "41",
+        "eroare, nu se poate instanţia un obiect al unei clase derivate printr-un pointer la un obiect de tip clasa de bază;",
+        "44",
+        "45"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fie următorul program C++: #include <iostream.h> template<class T, class E> float f(T x, E y){ return x+y;} float g(int x, float y){ return x-y;} int main(){ int a=5; float b=8.6; cout<<g(a,b); return 0; } Programul afişează:",
+      "answers": [
+        "3",
+        "eroare, parametrizarea clasei T este incorrect realizată",
+        "13.6",
+        "-3.6"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fie următorul program C++: #include<iostream.h> class B{ int x; public: B(int i=10) { x=i; } int get_x() { return x; }}; class D: public B{ public: D(int i):B(i) {} D operator+(const D& a) {return x+a.x; }}; int main() { D ob1(7), ob2(-12); cout<<(ob1+ob2).get_x(); return 0; } Indicați ce se va afișa pe ecran în urma executării programului:",
+      "answers": [
+        "-5",
+        "-4",
+        "eroare, în clasa derivată D nu se poate accesa data membră privată x a clasei B",
+        "-3"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fie următorul program C++: #include<iostream.h> class B{ public: int x; B(int i=16) { x=i; } B f(B ob) { return x+ob.x; } }; class D: public B{ public: D(int i=25) { x=i; } B f(B ob) { return x+ob.x+1; } void afisare(){ cout<<x; } }; int main() { B *p1=new D, *p2=new B, *p3=new B(p1->f(*p2)); cout<<p3->x; return 0; } Programul afişează:",
+      "answers": [
+        "41",
+        "eroare, în clasa derivată D nu se poate accesa data membră x a clasei B",
+        "16",
+        "25"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "O funcţie friend diferă de o metodă obişnuită a unei clase prin faptul că:",
+      "answers": [
+        "nu se poate defini inline;",
+        "nu primeşte pointerul implicit la obiect this;",
+        "nu poate accesa decât partea publică a obiectului;",
+        "se foloseşte doar pentru supraîncărcarea operatorilor;"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "O funcţie independentă declarată friend în domeniul private dintr-o clasă şi care primeşte ca parametru o referinţă la un obiect al clasei respective are acces:",
+      "answers": [
+        "doar la membrii publici;",
+        "la toti membrii;",
+        "la membrii public şi protected;",
+        "la membrii private;"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "De câte ori este apelat destructorul clasei Persoana în programul urmãtor C++? #include <iostream> using namespace std; class Persoana{ public: Persoana() {cout<<\"Constructor\"<<endl;} ~Persoana() {cout<<\"Destructor\"<<endl;}}; int main(){ Persoana** ppp; ppp = new Persoana*[5]; for(int i=0; i<5; i++) ppp[i] = new Persoana(); for(int i=0; i<5; i++) delete ppp[i]; } Răspuns:",
+      "answers": [
+        "10;",
+        "6;",
+        "7;",
+        "5;"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Presupunem că în C++ clasa A este prietenă cu clasa B, iar clasa B este prietenă cu clasa C. Care dintre următoarele afirmații este adevărată?",
+      "answers": [
+        "Clasa C devine automat prietenă cu clasa A.",
+        "Clasa B nu poate fi prietenă cu nicio altă clasă în afara clasei A.",
+        "Clasa A devine automat prietenă cu clasa C",
+        "Relația de prietenie nu este tranzitivă, prin urmare clasa A nu este prietenă clasei C."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Se consideră programul următor C++: #include<iostream.h> int i; class A { public: ~A(){i=10;}}; int foo(){ i=3; A ob; return i; } int main() { cout << foo() << endl; return 0; } Programul următor afișează:",
+      "answers": [
+        "3",
+        "2",
+        "1",
+        "0"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Supraîncărcarea unor operatori în C++ se poate realiza prin funcţii operator sau prin funcţii friend. Una dintre diferențele dintre aceste două posibilități constă în:",
+      "answers": [
+        "lista de parametri;",
+        "obiectul returnat;",
+        "nu există nicio diferență",
+        "aritatea operatorului."
+      ],
+      "correct_answer": null
+    }
+  ],
+  "metode_avansate_de_programare_java": [
+    {
+      "question": "Fie următoarea clasă Java: class C { int a; float x; boolean b; } Stabiliţi care dintre următoarele linii de cod este corectă:",
+      "answers": [
+        "C ob = new C(1);",
+        "C ob = new C(1,1.0);",
+        "C ob = new C();",
+        "C ob = new C(1,1.0,true);"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fie următorul program Java: class C { public static int a=1; } public class test { public static void main(String[] args) { C ob=new C(); C.a++; ob.a++; System.out.println(C.a); } } După executarea programului, va fi afişată valoarea:",
+      "answers": [
+        "3",
+        "2",
+        "1",
+        "nicio valoare, se obține o eroare la executare."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Un program Test scris în limbajul Java poate fi compilat folosind comanda:",
+      "answers": [
+        "javac Test",
+        "java Test.java",
+        "javac Test.class",
+        "javac Test.java"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Un program Test scris în limbajul Java şi compilat, poate fi rulat folosind comanda:",
+      "answers": [
+        "javac Test.java",
+        "java Test",
+        "java Test.class",
+        "java Test.java"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "În Java o clasă poate extinde:",
+      "answers": [
+        "cel mult o interfaţă",
+        "oricâte clase",
+        "cel mult o clasă",
+        "oricâte interfeţe"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "În Java o interfaţă poate extinde:",
+      "answers": [
+        "cel mult o interfată",
+        "oricâte interfeţe",
+        "cel mult o clasă",
+        "oricâte clase"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "În Java o clasă poate implementa:",
+      "answers": [
+        "o clasă",
+        "oricâte clase",
+        "o interfaţă",
+        "oricâte interfeţe"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fie următorul program Java: class A { int x=0; public A(int n) { x=n; } } class B extends A { int x=1; public B(int n) { super(n); } } public class test { public static void main(String[] args) { A a=new A(5); B b=new B(7); System.out.println(a.x+\" \"+b.x); } } După executarea programului, se va afişa:",
+      "answers": [
+        "05",
+        "51",
+        "57",
+        "01"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Următorul program Java class A { int x=10; static int y=20; } class B extends A { int x=30; static int y=40; } public class Test { public static void main(String[] args) { A ob = new B(); System.out.println(ob.x+\" \"+ob.y); } } Afișează",
+      "answers": [
+        "10 20",
+        "30 40",
+        "30 20",
+        "eroare la executare"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care dintre următoarele afirmații este adevărată pentru o metodă Java de tip final?",
+      "answers": [
+        "poate fi și suprascrisă și supraîncărcată",
+        "poate fi suprascrisă, dar nu poate fi supraîncărcată",
+        "nu poate fi nici suprascrisă și nici supraîncărcată",
+        "nu poate fi suprascrisă, dar poate fi supraîncărcată"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Considerăm următorul program Java: class C { static int x = 0; static int f() { return (++x)*(x--); } } public class teste_grila { public static void main(String[] args) { System.out.println(C.f()+\" \"+C.f()+\" \"+C.f()); } } După executarea programului, pe ecran se va afişa:",
+      "answers": [
+        "1 1 1",
+        "1 2 3",
+        "1 2 6",
+        "0 0 0"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fie următorul program Java: class Fir implements Runnable{ int x; public Fir(int x){ this.x = x; } public void run(){ for (int i = 0; i < 10; i++) System.out.print(x); } public static void main(String InterruptedException{ Fir obj1 = new Fir(1); Fir obj2 = new Fir(2); Thread t1 = new Thread(obj1); Thread t2 = new Thread(obj2); t1.start(); t2.start(); t2.join(); System.out.print(3); } } args[]) throws După executarea programului, poate fi afişat un număr format din:",
+      "answers": [
+        "10 cifre egale cu 1, 10 cifre egale cu 2 și o cifră egală cu 3, cifrele fiind în orice ordine posibilă",
+        "10 cifre egale cu 1, 10 cifre egale cu 2 și o cifră egală cu 3, dar toate cifrele egale cu 2 se vor afla înaintea cifrei 3",
+        "10 cifre egale cu 1, 10 cifre egale cu 2 și o cifră egală cu 3, dar toate cifrele egale cu 1 sau 2 se vor afla înaintea cifrei 3",
+        "10 cifre egale cu 1, urmate de 10 cifre egale cu 2 și la sfârșit o cifră egală cu 3"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "O subclasă Java a unei clase abstracte poate fi instanţiată numai dacă:",
+      "answers": [
+        "se foloseşte cuvantul cheie abstract;",
+        "suprascrie fiecare metodă declarată abstractă în superclasa sa şi furnizeaza implementări pentru toate acestea;",
+        "se foloseşte moştenirea multiplă;",
+        "subclasă abstractă nu poate fi instanţiată."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care este rolul declaraţiilor import într-o sursă Java?",
+      "answers": [
+        "Permite referireaclaselorfărăutilizareade prefixe;",
+        "Permite importul imaginilor folosite;",
+        "Elimină necesitatea declarării variabilelor;",
+        "Elimină apelurile directe ale funcţiilor fără clase."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Ce se afisează dacă se execută următorul cod Java: String s = new String( \"Computer\" ); if( s == \"Computer\" ) System.out.println( \"Equal A\" ); if( s.equals( \"Computer\" ) ) System.out.println( \"Equal B\" );",
+      "answers": [
+        "Eroare la complilare, deoarece operatorul == nu se poate aplica pentru tipul String",
+        "Se afisează mesajul “Equal A”",
+        "Se afisează mesajul “Equal B”",
+        "Se afişează ambele mesaje, “Equal A” , repsectiv “Equal B”"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Urmatorul subprogram Java: int as=3, bs=2, cs=4; System.out.print(((as < bs++) & (cs++ < bs)) + \" \"); System.out.println(as + \" \" + bs + \" \" + cs); System.out.print(((as < bs++) && (os++ < bs++)) + \" \"); System.out.println(as + \" \" + bs + \" \" + cs); Afişează :",
+      "answers": [
+        "Eroare la compilare: nu se poate aduna o valoare booleana cu un String;",
+        "Subprogramul se compilează şi la execuţie afisează :false 3 3 5 false 3 4 4",
+        "Subprogramul se compileaza şi la execuţie afisează:false 3 3 5 false 3 4 5",
+        "Subprogramul se compileaza şi la execuţie afisează false 3 3 5 false 3 5 6"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Secvenţa uramatoare Java: public class test { public static void main(String args[]){ String sir = \"Programare in Java, C++ este usoara\" ; String atom[]= sir.split(\" \") ; System.out.println(atom.length) ; }} Afisează:",
+      "answers": [
+        "Eroare la compliare pentru ca nu se specifica numarul de elemente ale tabloului atom",
+        "6",
+        "7",
+        "8"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Secvenţa uramatoare Java: public class test{ public static void main(String args[]){ String sir = \"Programare in Java, C++ este usoara\" ; String atom[]= sir.split(\" \") ; System.out.println(atom[0].length()) ; }} Afisează:",
+      "answers": [
+        "Eroare la compliare pentru ca nu se specifica numarul de elemente ale tabloului atom",
+        "6",
+        "10",
+        "9"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Ce se va afişa la execuţia urmatorului program Java? interface I1{ float x=2.3f; } public class Test implements I1{ public static void main(String [] args){ System.out.print(x+\" \"); x=6.7f; System.out.print(x); } }",
+      "answers": [
+        "Va aparea eroare la compilare deoarece valoarea variabilei x nu se mai poatemodifica;",
+        "La execuţie se va afişa: 2.3f 6.7f;",
+        "La execuţie se va afişa: 2.3f 2.3f;",
+        "La execuţie se va afişa: 2.3 6.7;"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "O subclasă Java a unei clase abstracte poate fi instanţiată numai dacă:",
+      "answers": [
+        "Se foloseşte cuvantul cheie abstract;",
+        "Suprascrie fiecare metodă declarată abstractă în superclasa sa, şi furnizeaza implementari pentru toate acestea;",
+        "Se foloseşte moştenirea multiplă;",
+        "O subclasă abstractă nu poate fi instanţiată;"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Tipurile referința în Java sunt:",
+      "answers": [
+        "tabloul, clasa, interfața",
+        "clasa, interfata",
+        "int, flout, double, char, String",
+        "String si null"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Secvența următoare: public class numar_43_nou { public static void main(String args[]) { String sir=\"Examen\"; sir.toUpperCase(); System.out.println(sir); } } Afișează:",
+      "answers": [
+        "EXAMEN",
+        "Examen",
+        "eXamen",
+        "Examen"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Secvența urătoare Java: public class numar_44_nou { public static void main(String args[]) { String sir1=\"Programare in Java\"; String sir2 =sir1.substring(4,8); System.out.println(sir2.toUpperCase()); } } Afișează:",
+      "answers": [
+        "ogramare",
+        "rama",
+        "RAMA",
+        "Java 14"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Secvența urătoare Java: public class Test { public static void main(String args[]) { int numar = 1; for (int x = 0; x < 4; x++) numar = numar << 1; System.out.println(numar);} } Afișează:",
+      "answers": [
+        "",
+        "",
+        "",
+        " 16 32 8 3"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Secveţa uramatoare Java: public class test { public static void main(String args[]){ String sir = \"Programare in Java, C++ este usoara\" ; String atom[]= sir.split(\"[ ,]\") ; System.out.println(atom.length) ; }} Afisează:",
+      "answers": [
+        "Eroare la compliare pentru ca nu se specifica numarul de elemente ale tabloului atom",
+        "2",
+        "6",
+        "5"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "O clasă Java declarată final",
+      "answers": [
+        "clasa nu poate fi instanțiată",
+        "orice cod exterior are acces la codul clasei",
+        "implementează o interfață",
+        "nu poate avea subclase"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Compoziția în limbajul Java reprezintă",
+      "answers": [
+        "relație de tip IS-A",
+        "relație de tip Can Do",
+        "relație de tip HAS-A.",
+        "Niciorelație 15"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fie următorul program Java: class Tablou{ int[] met(int []a){ a[0] = -a[0]; a = new int[a.length]; a[0] = 1; return a; } } public class Test{ public static void main(String[] args){ int a[] = {1,2,3,4,5}; int b[] = new Tablou().met(a); int s = 0; for(int i = 0; i < a.length; i++) s = s + a[i] + b[i]; System.out.println(s); } } După executarea programului, va fi afişată valoarea:",
+      "answers": [
+        "30",
+        "14",
+        "28",
+        "15"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Considerăm următorul program Java: class A{ public int x = 1; public A() { x++; } } class B extends A{ public B() { x++; } } class C extends B{ public int x = 1; public C() { x++; } } public class Test{ public static void main(String[] args){ B b = new B(); C c = new C(); System.out.println(b.x + \" \" + c.x); } } După executarea programului, va fi afişată valoarea:",
+      "answers": [
+        "3 3",
+        "3 4",
+        "2 2",
+        "3 2"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "După executarea secvenței de cod Java String s = \"Examen\", t = \"Examen\"; if (s == t) System.out.print(\"A\"); else System.out.print(\"B\"); if (s.equals(t)) System.out.print(\"C\"); else System.out.print(\"D\"); se va afişa:",
+      "answers": [
+        "AD",
+        "BC",
+        "AC",
+        "BD"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Precizați care dintre urmaătoarele afirmații sunt adevărate: I. o interfață poate să conțină câmpuri publice, statice și finale, respectiv metode statice si metode implicite cu implementare II. o înterfață poate fi instanțiată III. o clasă poate implementa mai multe interfețe IV. mai multe clase pot implementa aceeași interfață",
+      "answers": [
+        "I, II, IV",
+        "I, III, IV",
+        "II, III, IV",
+        "I, II, III, IV"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fie următorul program Java: class A { public static String f(String x) { return x+”A”; } public String g(String x) { return x+”B”; } } class B extends A { public static String f(String x) { return x+”C”; } public String g(String x) { return x+”D”; } } public class Test { public static void main(String[] args) { A a = new B(); System.out.println(a.f(”A”) + a.g(”C”)); } } După executarea programului, se va afişa:",
+      "answers": [
+        "AACD",
+        "ACCD",
+        "AACB",
+        "ACDC"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Un fir de executare în Java se poate defini:",
+      "answers": [
+        "printr-o instanță a clasei Runnable",
+        "printr-o instanță a clasei Object",
+        "printr-o instanță a clasei Thread",
+        "printr-o instanță a clasei Clone"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Ce se va afișa dupa executarea următorului program Java: public class Test { public static void main(String[] args) { TreeMap m = new TreeMap(); m.put(\"a\", null); m.put(\"b\", \"JavaSE\"); m.put(\"c\", \"Python\"); m.put(null, \"PHP\"); m.put(null, null); System.out.println(m); } }",
+      "answers": [
+        "{null=null, a=null, b=JavaSE, c=Python}",
+        "{a=null, b=JavaSE, c=Python}",
+        "{null=PHP, a=null, b=JavaSE, c=Python}",
+        "Exepție la executare de tip NullPointerException"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fie secvența următoare de cod (presupunem că în clasa Persoana sunt implementate corect metodele get și set pentru datele membre String nume și double salariu): listaPersoane.stream() .filter(p -> p.getNume().startsWith(\"\"B\"\")) .filter(p -> p.getSalariu() > 2000) .map(Persoana::getNume) .sorted() .map(o -> o.toString()) .collect(Collectors.joining(\"\",\"\")); Ce va produce secvența de cod dată?",
+      "answers": [
+        "șirul de caractere obținut prin concatenarea listei sortate a salariilor mai mari decât 2000 ale persoanelor ale căror nume începe cu B",
+        "șirul de caractere obținut prin concatenarea listei sortate a numelor persoanelor care încep cu B și cu salarii mai mari decât 2000",
+        "lungimea șirului de caractere produs prin concatenarea numelor persoanelor care încep cu B și cu salarii mai mari decât 2000",
+        "lista formată din persoanele ale căror nume care încep cu B și au salarii mai mari decât 2000"
+      ],
+      "correct_answer": null
+    }
+  ],
+  "tehnici_avansate_de_programare": [
+    {
+      "question": "Complexitatea minimă a unui algoritm care calculează numărul tuturor submulțimilor unei mulțimi cu 𝑛 elemente este:",
+      "answers": [
+        "𝒪(𝑛2 )",
+        "𝒪(2𝑛 )",
+        "𝒪(𝑛)",
+        "𝒪(𝑛!)"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Complexitatea minimă a unui algoritm care afişează toate submulțimile unei mulțimi cu 𝑛 elemente este:",
+      "answers": [
+        "𝒪(𝑛2 )",
+        "𝒪(2𝑛 )",
+        "𝒪(𝑛)",
+        "𝒪(𝑛!)"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Complexitatea minimă a unui algoritm care calculează numărul modurilor în care pot fi aşezate n cărți pe un raft suficient de lung este:",
+      "answers": [
+        "𝒪(𝑛2 )",
+        "𝒪(2𝑛 )",
+        "𝒪(𝑛)",
+        "𝒪(𝑛!)"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Complexitatea minimă a unui algoritm care afişează toate modurile în care pot fi aşezate n cărți pe un raft suficient de lung este:",
+      "answers": [
+        "𝒪(𝑛2 )",
+        "𝒪(2𝑛 )",
+        "𝒪(𝑛)",
+        "𝒪(𝑛!)"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Complexitatea minimă a unui algoritm care să afișeze numerele din șir în ordine crescătoare este:",
+      "answers": [
+        "𝒪(𝑛2 )",
+        "𝒪(𝑛3 )",
+        "𝒪(𝑛 log 2 𝑛)",
+        "𝒪(𝑛)"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Considerăm următorul program în limbajul C: #include<stdio.h> int main() { int a[100],i,j,n,s; scanf(\"%d\",&n); for(i=0;i<n;i++) scanf(\"%d\",&a[i]); i = s = 0; while(i<n) { j=i+1; while((j<=n) && (a[i]==a[j])) j++; s++; i=j; } printf(\"\\n\\n%d\\n\" , s); return 0; } Complexitatea algoritmului implementat în acest program este:",
+      "answers": [
+        "𝒪(𝑛2 )",
+        "𝒪(log 2 𝑛)",
+        "𝒪(𝑛3 )",
+        "𝑂(𝑛)"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Considerăm următorul program în limbajul C: #include<stdio.h> int main() { int a[100],i,j,n,s; scanf(\"%d\",&n); for(i=0;i<n;i++) scanf(\"%d\",&a[i]); i = s = 0; while(i<n) { j=i+1; while((j<=n) && (a[i]==a[j])) j++; s++; i=j; } printf(\"\\n\\n%d\\n\" , s); return 0; } Presupunând că tabloul 𝑎 este ordonat crescător, precizați ce afişează programul dat:",
+      "answers": [
+        "numărul valorilor distincte din tabloul 𝑎;",
+        "lungimea maximă a unei secvenţe din tabloul 𝑎 formată din valori egale;",
+        "numărul secvenţelor strict crescătoare din tabloul 𝑎;",
+        "lungimea maximă a unui subşir din tabloul 𝑎 format din valori egale."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Se consideră următoarea funcţie recursivă, scrisă în limbajul C: int F(int n) { if (n==0) return 0; else if ((n%10)>F(n/10)) return n%10; else return F(n/10); } Ce valoare va returna funcția după apelul 𝐹(38423)?",
+      "answers": [
+        "3",
+        "2",
+        "8",
+        "4 3"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Se consideră următorul program în limbajul C: #include<stdio.h> int F(int v[],int n) { if(n==0) return v[0]; else if(v[n]<0) return F(v,n-1); else return v[n]+F(v,n-1); } int main() { int i,v[10]; for(i=0;i<10;i++) if(i%2==0) v[i]=i; else v[i]=-i; printf(\"%d\",F(v,9)); return 0; } Ce afişează programul de mai sus?",
+      "answers": [
+        "-20",
+        "0",
+        "20",
+        "-5"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Se consideră următoarea funcţie recursivă, scrisă în limbajul C: int f(int n) { if (n==0) return 1; else return(((n%10)%2 == 0) && (f(n/10)!=0)); } Ce valoare va returna funcția după apelul 𝑓(6904)?",
+      "answers": [
+        "4",
+        "6",
+        "9",
+        "0"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Se consideră următoarea funcţie recursivă, scrisă în limbajul C: int p(int n,int x) { if(x==n) return 1; else if(n%x==0) return 0; else return p(n,x+1); } În urma apelului 𝑝(𝑛, 2) funcția va întoarce valoarea 1 dacă și numai dacă:",
+      "answers": [
+        "numărul natural 𝑛 este par;",
+        "numărul natural 𝑛 este prim;",
+        "numărul natural 𝑛 nu este prim;",
+        "numărul natural 𝑛 este impar."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Indicaţi care dintre următorii algoritmi nu se bazează pe tehnica de programare Divide et Impera:",
+      "answers": [
+        "sortarea rapidă;",
+        "căutarea binară;",
+        "sortarea prin interclasare;",
+        "sortarea prin numărare."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Stabiliți care dintre următoarele metode de sortare se bazează pe tehnica de programare Divide et Impera:",
+      "answers": [
+        "Bubblesort;",
+        "sortarea prin selecția minimului;",
+        "sortarea prin interclasare;",
+        "sortarea prin numărare."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Indicaţi care dintre următoarele metode de sortare nu are complexitatea 𝒪(𝑛 log 2 𝑛):",
+      "answers": [
+        "sortarea rapidă;",
+        "sortarea cu ansamble;",
+        "sortarea prin interclasare;",
+        "sortarea prin numărare."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fie 𝑣 un tablou unidimensional format din 1000000 de numere reale ordonate descrescător şi 𝑥 un număr real. Pentru a verifica dacă valoarea 𝑥 se găseşte sau nu în tabloul 𝑣, algoritmul de căutare binară va efectua:",
+      "answers": [
+        "exact 1000000 de comparaţii;",
+        "cel puţin 24 de comparaţii;",
+        "cel mult 24 de comparaţii;",
+        "nu se poate folosi algoritmul de căutare binară în acest caz."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Considerăm următoarea funcție scrisă în limbajul C: int S(int a[], int p, int u) { if(p>u) return 0; else { int m=(p+u)/2; return a[m] + S(a,p,m-1) + S(a,m+1,u); } } Ştiind că tabloul a este format din n numere întregi, iar apelul subprogramului va fi 𝑆(𝑎, 0, 𝑛 − 1), precizați ce va calcula funcția 𝑆:",
+      "answers": [
+        "valoarea elementului din mijlocul tabloului 𝑎;",
+        "dublul sumei valorilor din tabloul 𝑎;",
+        "numărul valorilor pozitive din tabloul 𝑎;",
+        "suma valorilor din tabloul 𝑎."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Dacă ultima soluție afişată de algoritmul backtracking pentru generarea tuturor permutărilor mulțimii {1,2, … ,7} este 7,6,3,5,4,2,1, atunci următoarea soluție care va fi afişată este:",
+      "answers": [
+        "7,6,4,1,2,5,3",
+        "7,1,2,3,4,5,6",
+        "7,6,4,1,2,3,5",
+        "7,6,5,3,4,2,1 6"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Dacă ultima soluție afişată de algoritmul backtracking pentru generarea tuturor permutărilor mulțimii {1,2,…,7} este 6,5,7,4,3,2,1, atunci următoarea soluție care va fi afişată este:",
+      "answers": [
+        "7,1,2,3,4,5,6",
+        "6,7,1,2,3,4,5",
+        "7,6,1,2,3,4,5",
+        "6,7,5,4,3,2,1"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Dacă ultima soluție afişată de algoritmul backtracking pentru generarea tuturor permutărilor mulțimii {1,2,…,7} este 6,7,4,5,3,2,1, atunci următoarea soluție care va fi afişată este:",
+      "answers": [
+        "7,1,2,3,4,5,6",
+        "6,5,7,1,2,3,4",
+        "6,7,5,1,2,3,4",
+        "6,1,2,3,4,5,7"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Folosind tehnica de programare backtracking pentru a genera toate permutările mulțimii {1,2, . . . , 𝑛}, o soluție se memorează sub forma unui tablou unidimensional 𝑥1 , 𝑥2 , . . . , 𝑥𝑛 . Dacă au fost deja generate valori pentru componentele 𝑥1 , 𝑥2 , . . . , 𝑥𝑘−1 , iar pentru componenta 𝑥𝑘 (1 < 𝑘 < 𝑛) au fost deja testate toate valorile posibile şi nu a fost găsită niciuna convenabilă, atunci:",
+      "answers": [
+        "se încearcă alegerea unei noi valori pentru 𝑥𝑘−1 ;",
+        "se încearcă alegerea unei noi valori pentru 𝑥1 , oricare ar fi valoarea lui 𝑘;",
+        "se încheie algoritmul;",
+        "se încearcă alegerea unei valori pentru componenta 𝑥𝑘+1 ."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Considerăm ecuația 𝑎1 𝑥1 + 𝑎2 𝑥2 + ⋯ + 𝑎𝑛 𝑥𝑛 = 𝑦, unde 𝑎1 , 𝑎2 , … , 𝑎𝑛 , 𝑦 sunt numere naturale nenule. Pentru a determina toate soluțiile ecuației de forma (𝑥1 , 𝑥2 , … , 𝑥𝑛 ), cu 𝑥1 , 𝑥2 , … , 𝑥𝑛 numere naturale, se poate folosi direct algoritmul backtracking pentru:",
+      "answers": [
+        "generarea permutărilor;",
+        "descompunerea unui număr natural ca sumă de numere naturale nenule;",
+        "plata unei sume folosind 𝑛 tipuri de monede;",
+        "generarea combinărilor."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Un algoritm optim care să afişeze toate subşirurile crescătoare de lungime maximă ale unui şir format din 𝑛 numere foloseşte:",
+      "answers": [
+        "doar metoda programării dinamice;",
+        "doar metoda backtracking (se generează toate subşirurile şirului respectiv, iar pentru fiecare subşir se verifică dacă este crescător şi, respectiv, maximal);",
+        "mai întâi metoda programării dinamice pentru a determina lungimea maximă 𝑙𝑚𝑎𝑥 a unui subşir crescător al şirului dat şi apoi metoda backtracking pentru a genera toate subşirurile crescătoare de lungime 𝑙𝑚𝑎𝑥 ale şirului considerat;",
+        "doar metoda Greedy. 7"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Considerăm că în Facultatea de Informatică sunt înscrişi 𝑛 studenți în anul III. Pentru a afişa toate grupele ce pot fi formate din câte 𝑝 studenți (𝑝 ≤ 𝑛) putem folosi algoritmul backtracking pentru:",
+      "answers": [
+        "generarea aranjamentelor formate din p elemente ale unei mulțimi cu n elemente;",
+        "generarea permutărilor unei mulțimi cu p elemente;",
+        "generarea combinărilor formate din p elemente ale unei mulțimi cu n elemente;",
+        "generarea aranjamentelor formate din n elemente ale unei mulțimi cu p elemente."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Utilizând metoda backtracking, se generează toate descompunerile distincte ale numărului natural 𝑛 = 10 ca sumă a cel puțin două numere naturale nenule. Care este ultima descompunere generată?",
+      "answers": [
+        "4 + 3 + 2 + 1",
+        "9 + 1",
+        "4 + 6",
+        "5 + 5"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Utilizând metoda backtracking, se generează toate descompunerile distincte ale numărului natural 𝑛 = 16 ca sumă a cel puțin două numere naturale nenule. Care este ultima descompunere generată?",
+      "answers": [
+        "4 + 4 + 4 + 4",
+        "15 + 1",
+        "7 + 9",
+        "8 + 8"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fie 𝑆 o sumă de bani şi 𝑣1 , 𝑣2 , … , 𝑣𝑛 valorile a n tipuri de monede. Presupunând că din fiecare tip avem la dispoziţie un număr nelimitat de monede, pentru afişarea tuturor modalităţilor în care poate fi plătită suma 𝑆 folosind monede disponibile trebuie să utilizăm un algoritm bazat pe metoda:",
+      "answers": [
+        "Greedy;",
+        "backtracking;",
+        "programării dinamice;",
+        "Divide et Impera."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Considerăm un rucsac cu ajutorul căruia putem transporta 66 kg şi 7 obiecte având greutățile 23, 10, 10, 25, 38, 7 şi 5 kg, iar câştigurile obținute prin transportul integral al fiecărui obiect la destinație sunt 69, 10, 30, 100, 19, 14 şi 50 RON. Ştiind că din orice obiect putem încărca şi numai o parte a sa, câştigul maxim pe care îl putem obține este:",
+      "answers": [
+        "250.5 RON",
+        "217 RON",
+        "265 RON",
+        "255 RON"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Considerăm un rucsac cu ajutorul căruia putem transporta 53 kg şi 7 obiecte având greutățile 10, 5, 18, 10, 8, 20 şi 40 kg, iar câştigurile obținute prin transportul integral al fiecărui obiect la destinație sunt 30, 40, 36, 10, 16, 10 şi 30 RON. Ştiind că din oricare obiect putem încărca şi numai o parte a sa, câştigul maxim pe care îl putem obține este:",
+      "answers": [
+        "133 RON",
+        "121 RON",
+        "133.5 RON",
+        "136.5 RON"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Stabiliți care dintre următoarele propoziții referitoare la tehnica de programare Greedy sunt adevărate:",
+      "answers": [
+        "conduce întotdeauna la o soluție optimă;",
+        "construieşte o soluție element cu element şi în cazul în care valoarea elementului curent nu verifică anumite condiții se renunță la acesta şi se revine la elementul anterior;",
+        "găseşte toate soluțile unei probleme;",
+        "conduce la o soluție optimă doar în cazul în care s-a demonstrat matematic corectitudinea criteriului de selecție pe baza căruia un element din mulțimea inițială este adăugat în soluția problemei."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "La un ghişeu stau la coadă 𝑛 persoane, numerotate cu 1,2, . . . , 𝑛. Cunoscând timpii de servire 𝑡1 , 𝑡2 , … , 𝑡𝑛 ai celor 𝑛 persoane şi ştiind că pentru a servi o persoană 𝑘 trebuie servite persoanele 1,2, . . . , 𝑘 − 1 aflate înaintea sa, trebuie să determinăm un mod de rearanjare al persoanelor la coadă, astfel încât timpul de aşteptare al fiecărei persoane să fie minim. Stabiliți care dintre următoarele variante de rezolvare a acestei probleme este corectă şi are o complexitate minimă:",
+      "answers": [
+        "se generează toate modurile în care pot fi rearanjate cele 𝑛 persoane la coadă şi pentru fiecare mod de rearanjare se calculează într-un tablou timpii de servire, iar soluția este dată de tabloul minim în sens lexicografic;",
+        "se rearanjează persoanele în ordinea descrescătoare a timpilor de servire;",
+        "se generează toate modurile în care pot fi rearanjate cele 𝑛 persoane la coadă şi pentru fiecare mod de rearanjare se calculează timpul total 𝑇 de servire al celor 𝑛 persoane, iar soluția este tabloul pentru care valoarea lui 𝑇 este minimă;",
+        "se rearanjează persoanele în ordinea crescătoare a timpilor de servire."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "La un ghişeu stau la coadă 7 persoane 𝑝1 , 𝑝2 , … , 𝑝7 . Cunoscând timpii lor de servire 𝑡1 = 12, 𝑡2 = 6, 𝑡3 = 15, 𝑡4 = 15, 𝑡5 = 12, 𝑡6 = 8, 𝑡7 = 2 şi ştiind că pentru a servi o persoană trebuie servite, mai întâi, toate persoanele aflate înaintea sa, precizați care dintre următoarele modalități de rearanjare a persoanelor la coadă nu minimizează timpul mediu de așteptare:",
+      "answers": [
+        "𝑝7 , 𝑝2 , 𝑝6 , 𝑝5 , 𝑝1 , 𝑝3 , 𝑝4",
+        "𝑝7 , 𝑝2 , 𝑝6 , 𝑝5 , 𝑝1 , 𝑝4 , 𝑝3",
+        "𝑝7 , 𝑝6 , 𝑝2 , 𝑝5 , 𝑝1 , 𝑝4 , 𝑝3",
+        "𝑝7 , 𝑝2 , 𝑝6 , 𝑝1 , 𝑝5 , 𝑝4 , 𝑝3"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "În Aula Magna a Universității Titu Maiorescu din București se va organiza un festival de teatru care va dura o singură zi. Fiecare regizor a transmis organizatorului festivalului intervalul de timp în care se poate desfășura spectacolul său. Organizatorul festivalului dorește să programeze un număr maxim de spectacole. Știind că spectacolele nu se pot suprapune și că între oricare două spectacole consecutive nu există nicio pauză, stabiliți care dintre strategiile de planificare de tip Greedy de mai jos pot fi folosite de către organizatorul festivalului pentru a planifica un număr maxim de spectacole în Aula Magna în ziua respectivă:",
+      "answers": [
+        "se sortează spectacolele în ordinea crescătoare a orelor la care se termină, se programează primul spectacol și apoi se consideră, pe rând, restul spectacolelor, un spectacol fiind programat doar dacă începe după ce se termină spectacolul programat anterior;",
+        "se sortează spectacolele în ordinea crescătoare a duratei lor, se programează primul spectacol și apoi se consideră, pe rând, restul spectacolelor, un spectacol fiind programat doar dacă începe după ce se termină spectacolul programat anterior;",
+        "se sortează spectacolele în ordinea crescătoare a orelor la care încep, se programează primul spectacol și apoi se consideră, pe rând, restul spectacolelor, un spectacol fiind programat doar dacă începe după ce se termină spectacolul programat anterior;",
+        "se sortează spectacolele în ordinea descrescătoare a orelor la care se termină, se programează primul spectacol și apoi se consideră, pe rând, restul spectacolelor, un spectacol fiind programat doar dacă începe după ce se termină spectacolul programat anterior."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "În Aula Magna a Universității Titu Maiorescu din București se va organiza un festival de teatru care va dura o singură zi. Fiecare regizor a transmis organizatorului festivalului intervalul de timp [ℎℎ1 : 𝑚𝑚1 , ℎℎ2 : 𝑚𝑚2 ] în care se poate desfășura spectacolul său. Știind că spectacolele nu se pot suprapune și între oricare două spectacole consecutive nu există nicio pauză, organizatorul festivalului s-a gândit să folosească o strategie de planificare de tip Greedy pentru a planifica un număr maxim de spectacole în cadrul festivalului. Considerând că 7 regizori au trimis intervalele de desfăşurare ale spectacolelor lor 𝑠1 = [08: 00,10: 30], 𝑠2 = [08: 30,11: 00], 𝑠3 = [16: 30,18: 00], 𝑠4 = [10: 30,10: 45], 𝑠5 = [11: 00,12: 00], 𝑠6 = [12: 30,16: 00], 𝑠7 = [17: 15,18: 45], precizați care dintre variantele de mai jos reprezintă o planificare corectă, cu un număr maxim de spectacole:",
+      "answers": [
+        "S1, S5, S6, S3",
+        "S2, S4, S5, S6, S7",
+        "S2, S5, S6, S3, S7",
+        "S1, S4, S5, S6, S7"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Se consideră un triunghi de numere întregi format din 𝑛 linii, astfel: prima linie conține un număr, a doua linie conține două numere,. . ., ultima linie conține 𝑛 numere. În acest triunghi se pot forma sume de numere întregi în felul următor: ➢ se selectează numărul aflat pe prima linie; ➢ la fiecare pas se selectează fie numărul aflat pe următoarea linie sub ultimul număr selectat, fie numărul aflat pe următoarea linie și o coloană la dreapta față de ultimul număr selectat, până când se ajunge pe ultima linie a triunghiului de numere. Un algoritm cu complexitate minimă care determină cea mai mare sumă ce se poate obține respectând regulile de mai sus folosește metoda:",
+      "answers": [
+        "Greedy;",
+        "backtracking;",
+        "programării dinamice;",
+        "Divide et Impera."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Se consideră următorul triunghi de numere întregi format din 𝑛 = 4 linii: 100 −12 −20 130 200 210 114 118 320 160 În acest triunghi se pot forma sume de numere întregi în felul următor: ➢ se selectează numărul aflat pe prima linie; ➢ la fiecare pas se selectează fie numărul aflat pe următoarea linie sub ultimul număr selectat, fie numărul aflat pe următoarea linie și o coloană la dreapta față de ultimul număr selectat, până când se ajunge pe ultima linie a triunghiului de numere. Care este suma maximă ce poate fi obținută în triunghiul dat, respectând condițiile precizate mai sus?",
+      "answers": [
+        "518",
+        "402",
+        "428",
+        "608"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fie 𝑆 o sumă de bani şi 𝑣1 , 𝑣2 , … , 𝑣𝑛 valorile a n tipuri de monede (se presupune că din fiecare tip de monedă avem la dispoziţie un număr nelimitat de monede). Un algoritm optim care să determine numărul minim de monede cu care poate fi plătită suma 𝑆, folosind monede de tipurile date, folosește metoda:",
+      "answers": [
+        "Greedy;",
+        "backtracking;",
+        "programării dinamice;",
+        "Divide et Impera."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Precizați câte subșiruri strict crescătoare de lungime maximă conține tabloul 𝑣 = (21,18,13,19,21,16,16,17,26):",
+      "answers": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Indicați lungimea maximă a unui (12,18,17,11,10,26,17,26,19,28): subșir strict crescător din tabloul 𝑣= subșir strict crescător din tabloul 𝑣=",
+      "answers": [
+        "2",
+        "4",
+        "3",
+        "5"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Indicați lungimea maximă a (18,14,5,4,8,15,12,19,16,22): unui",
+      "answers": [
+        "2",
+        "4",
+        "3",
+        "5"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Având la dispoziție un număr nelimitat de monede cu valorile 5 RON, 4 RON, 3 RON și 1 RON, precizați numărul minim de monede cu care poate fi plătită suma de 17 RON:",
+      "answers": [
+        "4",
+        "5",
+        "3",
+        "6"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Având la dispoziție un număr nelimitat de monede cu valorile 7 RON, 6 RON, 3 RON și 2 RON, precizați numărul minim de monede cu care poate fi plătită suma de 19 RON:",
+      "answers": [
+        "6",
+        "3",
+        "4",
+        "5 13"
+      ],
+      "correct_answer": null
+    }
+  ],
+  "sisteme_de_operare": [
+    {
+      "question": "Ce fișier este utilizat pentru a seta numele gazdei (hostname) pe un sistem Linux?",
+      "answers": [
+        "/etc/hostname",
+        "/etc/hosts",
+        "/etc/resolv.conf",
+        "/etc/network/interfaces Răspuns corect: a) /etc/hostname Explicație: Fișierul /etc/hostname conține numele gazdei pentru sistemul local. Pentru a-l aplica, poate fi necesară rularea comenzii hostnamectl set-hostname."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Cum afișezi spațiul liber pe disc într-un sistem Linux?",
+      "answers": [
+        "df -h",
+        "du -sh",
+        "lsblk",
+        "free -m Răspuns corect: a) df -h Explicație: Comanda df -h afișează utilizarea spațiului pe disc în format ușor de citit (human-readable)."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Cum adaugi un utilizator în Linux?",
+      "answers": [
+        "useradd username",
+        "adduser username",
+        "sudo useradd username",
+        "toate cele de mai sus Răspuns corect: d) toate cele de mai sus Explicație: useradd și adduser pot fi utilizate pentru a adăuga utilizatori. sudo este necesar dacă nu ești root."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Ce face comanda echo \"export PATH=/usr/local/bin:\\$PATH\" >> ~/.bashrc?",
+      "answers": [
+        "Adaugă /usr/local/bin la variabila PATH pentru sesiunea curentă.",
+        "Modifică permanent variabila PATH pentru utilizatorul curent.",
+        "Resetează PATH la valoarea implicită.",
+        "Afișează valoarea curentă a variabilei PATH. Răspuns corect: b) Modifică permanent variabila PATH pentru utilizatorul curent. Explicație: Comanda adaugă o nouă cale la variabila PATH în fișierul ~/.bashrc, care este citit la fiecare inițializare a shell-ului. 1"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Cum setezi permisiunea de executare pentru toate fișierele dintr-un director?",
+      "answers": [
+        "chmod +x *",
+        "chmod -R +x .",
+        "chmod u+x *",
+        "find . -type f -exec chmod +x {} \\; Răspuns corect: d) find . -type f -exec chmod +x {} ; Explicație: Comanda caută recursiv (find . -type f) toate fișierele din director și aplică permisiunea de executare folosind chmod +x. Celelalte variante fie nu aplică recursiv permisiunile, fie modifică doar anumite fișiere."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Ce face comanda grep -rl \"text\" /var/log?",
+      "answers": [
+        "Afișează liniile care conțin \"text\" din fișierele din /var/log.",
+        "Caută și afișează doar numele fișierelor care conțin \"text\".",
+        "Caută recursiv \"text\" în directorul /var/log și afișează conținutul.",
+        "Șterge fișierele care conțin \"text\". Răspuns corect: b) Caută și afișează doar numele fișierelor care conțin \"text\". Explicație: -r: Caută recursiv. -l: Afișează doar numele fișierelor care conțin textul specificat."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Cum ștergi toate fișierele mai vechi de 7 zile dintr-un director?",
+      "answers": [
+        "rm -rf * --older-than 7",
+        "find /cale/director -type f -mtime +7 -delete",
+        "find /cale/director -type f -name \"*.old\" -exec rm {} \\;",
+        "ls -l | grep \"7 days ago\" | xargs rm Răspuns corect: b) find /cale/director -type f -mtime +7 -delete Explicație: -mtime +7: Selectează fișierele modificate acum mai mult de 7 zile. -delete: Șterge fișierele găsite."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Ce face comanda alias ll=\"ls -l\"?",
+      "answers": [
+        "Creează o copie a comenzii ls -l.",
+        "Definește un alias pentru a rula comanda ls -l.",
+        "Creează un fișier numit ll care conține comanda ls -l.",
+        "Afișează toate aliasurile definite. Răspuns corect: b) Definește un alias pentru a rula comanda ls -l. Explicație: Comanda alias permite crearea unui shortcut pentru comenzi complexe sau lungi. 2"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Cum listezi toate procesele care aparțin unui anumit utilizator?",
+      "answers": [
+        "ps -u username",
+        "top -u username",
+        "pgrep -u username",
+        "toate cele de mai sus Răspuns corect: d) toate cele de mai sus Explicație: ps -u: Afișează procesele utilizatorului specificat. top -u: Monitorizează resursele utilizate de procesele utilizatorului. pgrep -u: Returnează doar PID-urile proceselor."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Ce face comanda tar -czf backup.tar.gz /home/user?",
+      "answers": [
+        "Creează o arhivă comprimată a directorului /home/user.",
+        "Extrage fișierele din arhiva backup.tar.gz.",
+        "Creează un backup necomprimat al directorului /home/user.",
+        "Șterge conținutul directorului /home/user. Răspuns corect: a) Creează o arhivă comprimată a directorului /home/user. Explicație: -c: Creează o arhivă. -z: Comprimă cu gzip. -f: Specifică numele fișierului arhivă."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care este comanda pentru a afișa tabela de rutare?",
+      "answers": [
+        "route",
+        "ip route",
+        "netstat -r",
+        "toate cele de mai sus Răspuns corect: d) toate cele de mai sus Explicație: route și ip route afișează tabela de rutare. netstat -r este o alternativă mai veche pentru a vizualiza rutele de rețea."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Cum adaugi un cron job care să ruleze zilnic la ora 12:00?",
+      "answers": [
+        "0 12 * * * /cale/comanda.sh",
+        "12 0 * * * /cale/comanda.sh",
+        "0 0 12 * * /cale/comanda.sh",
+        "* * 12 * * /cale/comanda.sh 3"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Ce face comanda sed 's/Linux/UNIX/g' file.txt?",
+      "answers": [
+        "Înlocuiește primul cuvânt \"Linux\" din fiecare linie cu \"UNIX\".",
+        "Înlocuiește toate instanțele de \"Linux\" cu \"UNIX\" în fișierul file.txt.",
+        "Afișează conținutul fișierului file.txt fără modificări.",
+        "Șterge toate liniile care conțin \"Linux\". Răspuns corect: b) Înlocuiește toate instanțele de \"Linux\" cu \"UNIX\" în fișierul file.txt. Explicație: s: Substituire. /g: Înlocuire globală în fiecare linie."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Cum compilezi un program C folosind mai multe fișiere sursă?",
+      "answers": [
+        "gcc -o program file1.c file2.c",
+        "gcc -c file1.c file2.c",
+        "gcc -shared file1.c file2.c -o program",
+        "make file1.c file2.c Răspuns corect: a) gcc -o program file1.c file2.c Explicație: gcc -o program: Creează un executabil numit program. Specificarea mai multor fișiere sursă permite legarea lor împreună."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Ce face comanda ping -c 4 google.com?",
+      "answers": [
+        "Ping continuu către google.com.",
+        "Trimite 4 pachete ICMP către google.com.",
+        "Verifică dacă portul 4 este deschis pe google.com.",
+        "Testează viteza conexiunii către google.com. Răspuns corect: b) Trimite 4 pachete ICMP către google.com. Explicație: -c 4: Specifică numărul de pachete trimise."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Cum afișezi toate variabilele de mediu?",
+      "answers": [
+        "env",
+        "printenv",
+        "export -p",
+        "toate cele de mai sus 4"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Cum execuți un script Bash în fundal?",
+      "answers": [
+        "bash script.sh &",
+        "nohup bash script.sh",
+        "./script.sh &",
+        "toate cele de mai sus Răspuns corect: d) toate cele de mai sus Explicație: &: Rulează procesul în fundal. nohup: Permite rularea procesului și după deconectare."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Cum verifici utilizarea memoriei pe un sistem Linux?",
+      "answers": [
+        "free -h",
+        "top",
+        "vmstat",
+        "toate cele de mai sus Răspuns corect: d) toate cele de mai sus Explicație: free -h: Afișează memoria utilizată și disponibilă. top: Monitorizează utilizarea memoriei în timp real. vmstat: Oferă informații despre memorie și procese."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Ce face comanda #!/bin/bash plasată în prima linie a unui script?",
+      "answers": [
+        "Definește directorul curent de lucru pentru script.",
+        "Specifică shell-ul care va interpreta scriptul.",
+        "Face scriptul executabil automat.",
+        "Afișează versiunea curentă de Bash. Răspuns corect: b) Specifică shell-ul care va interpreta scriptul. Explicație: #!/bin/bash este un \"shebang\" care definește shell-ul folosit pentru a rula scriptul."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Ce face următorul script? for file in *.txt; do mv \"$file\" \"${file%.txt}.bak\" done",
+      "answers": [
+        "Copiază toate fișierele .txt într-un nou director.",
+        "Renumește toate fișierele .txt în .bak.",
+        "Șterge toate fișierele .txt.",
+        "Afișează doar fișierele .txt. Răspuns corect: b) Renumește toate fișierele .txt în .bak. Explicație: ${file%.txt} elimină extensia .txt. .bak este adăugată la final."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Ce face comanda read -p \"Introdu numele: \" nume?",
+      "answers": [
+        "Afișează \"Introdu numele: \" și salvează răspunsul în variabila nume.",
+        "Scrie \"Introdu numele: \" într-un fișier numit nume.",
+        "Afișează conținutul fișierului nume.",
+        "Caută numele în variabilele de mediu. Răspuns corect: a) Afișează \"Introdu numele: \" și salvează răspunsul în variabila nume. Explicație: Opțiunea -p de la read afișează un mesaj de prompt."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Cum verifici dacă un fișier există într-un script Bash?",
+      "answers": [
+        "[ -e fișier ]",
+        "[ -f fișier ]",
+        "[ -d fișier ]",
+        "a) și b) Răspuns corect: d) a) și b) Explicație: -e: Verifică dacă fișierul sau directorul există. -f: Verifică doar dacă este fișier obișnuit (nu director)."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Ce face comanda while true; do echo \"Rulez\"; done?",
+      "answers": [
+        "Afișează \"Rulez\" o singură dată.",
+        "Rulează un ciclu infinit care afișează \"Rulez\".",
+        "Nu face nimic.",
+        "Închide terminalul. Răspuns corect: b) Rulează un ciclu infinit care afișează \"Rulez\". Explicație: while true definește un ciclu infinit. Pentru a-l opri, se utilizează Ctrl+C."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Cum execuți un script și redirecționezi atât ieșirea standard, cât și erorile într-un fișier?",
+      "answers": [
+        "./script.sh > output.log 2>&1",
+        "./script.sh > output.log",
+        "./script.sh 2> output.log",
+        "./script.sh &> output.log Răspuns corect: a) ./script.sh > output.log 2>&1 Explicație: > output.log: Redirecționează ieșirea standard. 2>&1: Redirecționează erorile (stderr) către același loc ca stdout. 7"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Ce face comanda chmod 750 script.sh?",
+      "answers": [
+        "Atribuie permisiuni complete pentru toți utilizatorii.",
+        "Permite proprietarului să citească, să scrie și să execute fișierul, grupului doar să-l execute, iar altora niciun acces.",
+        "Permite proprietarului să citească, să scrie și să execute fișierul, grupului doar să-l citească, iar altora să-l execute.",
+        "Permite tuturor utilizatorilor să execute fișierul. Răspuns corect: b) Permite proprietarului să citească, să scrie și să execute fișierul, grupului doar să-l execute, iar altora niciun acces. Explicație: 7: citire, scriere, executare pentru proprietar. 5: citire și executare pentru grup. 0: niciun acces pentru ceilalți."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Cum afișezi primele 10 linii dintr-un fișier?",
+      "answers": [
+        "head -10 file.txt",
+        "tail -10 file.txt",
+        "cat -n10 file.txt",
+        "less -10 file.txt Răspuns corect: a) head -10 file.txt Explicație: Comanda head afișează primele linii dintr-un fișier, iar opțiunea -10 indică numărul de linii."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Ce face comanda ln -s /etc/passwd ~/passwd-link?",
+      "answers": [
+        "Copiază fișierul /etc/passwd în directorul utilizatorului.",
+        "Creează un link simbolic către /etc/passwd numit passwd-link în directorul utilizatorului.",
+        "Șterge fișierul /etc/passwd.",
+        "Renumește fișierul /etc/passwd în passwd-link. Răspuns corect: b) Creează un link simbolic către /etc/passwd numit passwd-link în directorul utilizatorului. Explicație: ln -s creează un link simbolic, o referință către un alt fișier."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Cum verifici spațiul liber pe partiții?",
+      "answers": [
+        "df -h",
+        "du -h",
+        "lsblk",
+        "mount Răspuns corect: a) df -h 8"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Ce face următorul script? #!/bin/bash for i in {1..3}; do echo \"Linia $i\" done",
+      "answers": [
+        "Afișează doar \"Linia 1\".",
+        "Rulează un ciclu infinit.",
+        "Afișează \"Linia 1\", \"Linia 2\" și \"Linia 3\".",
+        "Nu face nimic, deoarece sintaxa este greșită. Răspuns corect: c) Afișează \"Linia 1\", \"Linia 2\" și \"Linia 3\". Explicație: Ciclul for iterează de 3 ori, iar echo afișează textul pentru fiecare valoare."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Cum verifici ce utilizatori sunt conectați în prezent?",
+      "answers": [
+        "who",
+        "w",
+        "users",
+        "toate cele de mai sus Răspuns corect: d) toate cele de mai sus Explicație: who: Listează utilizatorii conectați. w: Afișează utilizatorii conectați și procesele lor. users: Listează utilizatorii conectați, într-un format simplificat."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Cum verifici ce pachete sunt instalate pe un sistem bazat pe Debian?",
+      "answers": [
+        "rpm -qa",
+        "dpkg --get-selections",
+        "apt list --installed",
+        "b) și c) Răspuns corect: d) b) și c) Explicație: dpkg --get-selections: Listează toate pachetele instalate. apt list --installed: Oferă o listă detaliată a pachetelor instalate. 9"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Cum afișezi procesele care utilizează cel mai mult CPU pe un sistem Linux?",
+      "answers": [
+        "top",
+        "ps aux --sort=-%cpu",
+        "htop",
+        "toate cele de mai sus Răspuns corect: d) toate cele de mai sus Explicație: top și htop afișează procesele în timp real. ps aux --sort=-%cpu listează procesele sortate după utilizarea CPU."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Cum verifici permisiunile unui fișier?",
+      "answers": [
+        "ls -l",
+        "chmod file",
+        "stat file",
+        "a) și c) Răspuns corect: d) a) și c) Explicație: ls -l: Afișează permisiunile în format simbolic. stat file: Afișează detalii despre fișier, inclusiv permisiunile."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Ce face comanda kill -9 <PID>?",
+      "answers": [
+        "Trimite un semnal de terminare soft către proces.",
+        "Trimite un semnal de oprire imediată către proces.",
+        "Repornește procesul.",
+        "Suspendă procesul. Răspuns corect: b) Trimite un semnal de oprire imediată către proces. Explicație: Semnalul -9 (SIGKILL) oprește imediat procesul, fără a-i permite să-și salveze starea."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Ce face comanda find /home -type f -name \"*.log\"?",
+      "answers": [
+        "Găsește directoarele care conțin fișiere .log.",
+        "Găsește toate fișierele cu extensia .log din /home.",
+        "Șterge fișierele .log din /home.",
+        "Listează doar directoarele din /home. Răspuns corect: b) Găsește toate fișierele cu extensia .log din /home. Explicație: -type f: Specifică doar fișiere. -name \"*.log\": Caută fișiere care se termină cu .log."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Ce fișier conține informații despre parolele utilizatorilor?",
+      "answers": [
+        "/etc/shadow",
+        "/etc/passwd",
+        "/etc/group",
+        "/etc/login.defs Răspuns corect: a) /etc/shadow Explicație: Fișierul /etc/shadow stochează parolele criptate și alte informații despre conturile de utilizatori."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Cum creezi un fișier gol folosind comanda touch?",
+      "answers": [
+        "touch <fișier>",
+        "create <fișier>",
+        "echo \"\" > <fișier>",
+        "createfile <fișier> Răspuns corect: a) touch <fișier> Explicație: Comanda touch creează un fișier gol sau actualizează data de modificare a unui fișier existent."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Cum ștergi un fișier numit file1.txt?",
+      "answers": [
+        "rm file1.txt",
+        "delete file1.txt",
+        "remove file1.txt",
+        "erase file1.txt 11"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Cum faci ca un fișier să fie doar citibil pentru toți utilizatorii?",
+      "answers": [
+        "chmod 444 file.txt",
+        "chmod 777 file.txt",
+        "chmod 555 file.txt",
+        "chmod 4444 file.txt Răspuns corect: a) chmod 444 file.txt Explicație: Permisiunea 444 permite citirea fișierului pentru toți utilizatorii, dar fără drepturi de scriere sau execuție."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Cum copiezi un fișier numit file1.txt într-un alt director?",
+      "answers": [
+        "cp file1.txt /path/to/directory/",
+        "move file1.txt /path/to/directory/",
+        "copy file1.txt /path/to/directory/",
+        "cp /path/to/directory/ file1.txt Răspuns corect: a) cp file1.txt /path/to/directory/ Explicație: Comanda cp copiază fișiere sau directoare într-o locație specificată."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Cum vizualizezi primele 10 linii ale unui fișier denumit logfile.log?",
+      "answers": [
+        "head logfile.log",
+        "tail logfile.log",
+        "cat logfile.log | head",
+        "a) și c) Răspuns corect: d) a) și c) Explicație: Atât head logfile.log cât și cat logfile.log | head vor afișa primele 10 linii ale fișierului."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Cum poți să vizualizezi ultima linie dintr-un fișier în timp real?",
+      "answers": [
+        "tail -f logfile.log",
+        "head -f logfile.log",
+        "cat logfile.log | tail",
+        "tail -n 1 logfile.log Răspuns corect: a) tail -f logfile.log Explicație: Comanda tail -f urmărește un fișier și afișează în timp real ultimele linii ale acestuia. 12"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Ce face comanda cp -r source_dir target_dir?",
+      "answers": [
+        "Copiază fișierul source_dir într-un alt director.",
+        "Copiază directorul și tot conținutul acestuia în target_dir.",
+        "Mărește dimensiunea directorului source_dir.",
+        "Creează un link simbolic către source_dir în target_dir. Răspuns corect: b) Copiază directorul și tot conținutul acestuia în target_dir. Explicație: Opțiunea -r este folosită pentru a copia recursiv un director și subdirectoarele sale."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Cum afișezi conținutul unui fișier fără a-l deschide efectiv?",
+      "answers": [
+        "cat file.txt",
+        "open file.txt",
+        "less file.txt",
+        "vi file.txt Răspuns corect: c) less file.txt Explicație: Comanda less permite vizualizarea unui fișier pe pagini, fără a-l edita efectiv."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Cum folosești comanda tar pentru a crea un fișier arhivă?",
+      "answers": [
+        "tar -xvf archive.tar file1.txt",
+        "tar -cvf archive.tar file1.txt",
+        "tar -xvf file1.txt archive.tar",
+        "tar -cf archive.tar file1.txt Răspuns corect: b) tar -cvf archive.tar file1.txt Explicație: Comanda tar -cvf creează o arhivă cu fișierele specificate."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Cum adaugi text într-un fișier existent folosind comanda echo?",
+      "answers": [
+        "echo \"text\" >> file.txt",
+        "echo \"text\" > file.txt",
+        "echo \"text\" file.txt",
+        "echo file.txt >> \"text\" Răspuns corect: a) echo \"text\" >> file.txt Explicație: Operatorul >> adaugă text la sfârșitul fișierului fără a-l suprascrie. 13"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Cum schimbi proprietarul fișierului file.txt în utilizatorul user1?",
+      "answers": [
+        "chown user1 file.txt",
+        "chmod user1 file.txt",
+        "chgrp user1 file.txt",
+        "chown file.txt user1 Răspuns corect: a) chown user1 file.txt Explicație: Comanda chown schimbă proprietarul fișierului 14"
+      ],
+      "correct_answer": null
+    }
+  ],
+  "rețele_de_calculatoare_/_administrarea_rețelelor_de_calculatoare": [
+    {
+      "question": "Ce algoritmi matematici se pot folosi pentru a calcula distanța minimă dintre noduri într-o rețea?",
+      "answers": [
+        "algoritmul inundării",
+        "despicarea orizontului",
+        "algoritmul lui Dijkstra",
+        "algoritmi pe bază de flux"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Rutarea este:",
+      "answers": [
+        "Procesul prin care un ruter trimite pachetele IP spre rețeaua destinatie pe baza adresei IP destinație și a tabelei de rutare.",
+        "procesul de transfer al datelor într-un segment de rețea (LAN) de la o sursă la o destinație",
+        "procesul de actualizare a tabelei de rutare",
+        "procesul de configurare a unui protocol de rutare pe un ruter"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care dintre următoarele entități nu poate fi un câmp în tabela de rutare:",
+      "answers": [
+        "adresa destinație",
+        "masca de rețea",
+        "interfața (adresa) următorului salt",
+        "protocolul de rutare"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Un ruter dirijează pachetele IP pe baza:",
+      "answers": [
+        "adresei sursă si adresei destinație",
+        "adresei de rețea destinație si tabelei de rutare",
+        "adresei fizice",
+        "adresei destinație si protocolului DNS"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Ce port este folosit pentru configurarea inițială a unui ruter direct de la un calculator, fără a necesita autentificare?",
+      "answers": [
+        "auxiliar",
+        "consolă",
+        "serial",
+        "Ethernet"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Ce comandă data pe un ruter CISCO afisează tabela de rutare?",
+      "answers": [
+        "ping",
+        "show ip route",
+        "show interface",
+        "show running config"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care este un dezavantaj al rutării dinamice?",
+      "answers": [
+        "administrare greoaie",
+        "necesită reconfigurare la fiecare schimbare de topologie de rețea",
+        "nu poate ocoli defecțiunile apărute în rețea",
+        "încarcă suplimentar traficul din rețea"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Prin ce identifică un ruter rețeaua de destinație a unui pachet?",
+      "answers": [
+        "prin adresa MAC",
+        "prin adresa portului de destinație",
+        "prin adresa IP destinație si masca de rețea",
+        "prin adresa de nivel transport (port TCP sau UDP) 1"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care este rolul unei adrese de broadcast?",
+      "answers": [
+        "de a transmite un pachet către o singură rețea destinație",
+        "de a trimite un pachet către o listă de destinație",
+        "de a trimite un mesaj către toate ruterele dintr-o rețea",
+        "de a trimite un mesaj către toate gazdele dintr-o rețea/subrețea"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Ce protocol (serviciu) face conversia unei adrese fizice (MAC) într-o adresă IP în cadrul unui LAN Ethernet?",
+      "answers": [
+        "ARP",
+        "RARP",
+        "ICMP",
+        "DNS"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care dintre următoarele este o adresă multicast în IPv4?",
+      "answers": [
+        "111.111.111.111",
+        "255.255.255.255",
+        "225.1.1.1",
+        "224.0.0.2"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Următoarea adresă IPv6 2023:0000:34FA:0000:0000:09C1:4322:AA43 se mai poate scrie corect astfel:",
+      "answers": [
+        "2023::0:34FA::09C1:4322:AA43",
+        "2023:0000:34FA::9C1:4322:AA43",
+        "2023::34FA::9C1:4322:AA43",
+        "2023::34FA::09C1:4322:AA43"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Interoperabilitatea IPv4 cu IPv6 se poate face prin:",
+      "answers": [
+        "Stiva duală",
+        "Translație de adresă (NAT) sau de port (PAT)",
+        "Folosirea unor tabele de rutare duală",
+        "Protocoalele sunt interoperabile nativ"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Ce câmpuri obligatorii are antetul unui cadru Ethernet?",
+      "answers": [
+        "Adresele IP sursă si destinație",
+        "Controlul erorilor (CRC)",
+        "Durata de viață a cadrului",
+        "Numărul de secvență"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Rolul unui server DNS într-o rețea de calculatoare este:",
+      "answers": [
+        "Să stabilească nume de domenii și să le administreze",
+        "Să facă rezoluția adresă fizică ↔ adresă IP",
+        "Să facă rezoluția nume de domeniu ↔adresa IP",
+        "Să atribuie adrese IP echipamentelor din rețea"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care dintre următoarele variante nu este un nume de domeniu DNS de prim nivel în Internet?",
+      "answers": [
+        ".arp",
+        ".com",
+        ".edu",
+        ".ro 2"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Ce comandă este mai des folosită pentru a afla informații despre configurarea IP în sistemele de operare Windows 11?",
+      "answers": [
+        "PING",
+        "WINCONFIG",
+        "IPCONFIG",
+        "IP_CONF"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Ce aplicație din sistemul de operare Windows Server 2022 administrează conturile utilizatorilor?",
+      "answers": [
+        "Domain Controller-ul",
+        "DHCP",
+        "DNS",
+        "IIS (Internet Information Server)"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Ce model de rețea este acela în care serviciile asigurate utilizatorilor la cererea acestora sunt găzduite de aplicații dedicate care rulează pe masini fizice sau virtuale?",
+      "answers": [
+        "Model bazat pe organizație",
+        "Model bazat pe resurse",
+        "Model client-server",
+        "Model bazat pe calcul distribuit"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Ce comandă se poate folosi pentru a afla numele și adresa serverului DNS dintr-o rețea?",
+      "answers": [
+        "Winword",
+        "NSLOOKUP",
+        "PING",
+        "NETSTAT"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Câte adrese IP trebuie să aibă configurate un ruter pentru a face serviciul de rutare?",
+      "answers": [
+        "Cel puțin una",
+        "Una sau mai multe indifferent de rețea",
+        "Două în aceeași rețea",
+        "Cel puțin două in rețele diferite"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care este rolul unui ruter într-o rețea?",
+      "answers": [
+        "Să găzduiască tabelele de rutare și să forwardeze spre destinație pachetele IP sosite",
+        "Să facă rezoluția adresă IP adresă MAC",
+        "Să creeze topologia rețelei",
+        "Să descopere toate echipamentele destinație din rețea"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care dintre protocoalele de mai jos permite monitorizarea stării funcționale a resurselor de rețea?",
+      "answers": [
+        "HTTP",
+        "IMAP",
+        "SNMP",
+        "SMTP"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "O rețea din Internet are masca de subrețea 255.255.225.224. Care este numărul maxim de gazde din subrețea?",
+      "answers": [
+        "16",
+        "30",
+        "64",
+        "32"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care dintre următoarele variante este o mască validă de subrețea fără clasă?",
+      "answers": [
+        "255.0.0.0",
+        "255.255.255.0",
+        "255.255.255.230",
+        "255.255.255.240"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Comanda Router(config)#hostname permite:",
+      "answers": [
+        "aflarea numelui ruterului",
+        "stabilirea numelui ruterului din modul configurare globală",
+        "accesul la configurarea ruterului",
+        "stabilirea numelui si a parolei ruterului"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Ce afirmații referitoare la tehnologia MPLS sunt adevărate:",
+      "answers": [
+        "Este un mecanism de incapsulare suplimentar între nivelurile 3 si 4 din arhitectura TCP/IP",
+        "Inlocuieste complet adresele IP dintr-o rețea",
+        "Foloseste comutarea fluxurilor de date pe bază de etichete",
+        "Eticheta este un înlocuitor de adrese MAC din LAN-uri Ethernet"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Tehnicile de transmisie cu spectru împrăștiat se folosesc cu preponderență:",
+      "answers": [
+        "In rețelele Ethernet",
+        "In rețelele de transport",
+        "In rețelele FDDI",
+        "In rețelele wireless"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Se dă adresa IP 140.20.37.133 si masca de subrețea 255.255.255.192. Să se precizeze adresa de subrețea din care face parte această adresă IP si adresa de difuzare în subrețea.",
+      "answers": [
+        "140.20.37.120 si 140.20.37.255",
+        "140.20.37.128 si 140.20.37.191",
+        "140.20.37.0 si 140.20.37.255",
+        "140.20.37.128 si 140.20.37.120"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Metrica (costul) unei rute poate fi:",
+      "answers": [
+        "Un număr intre 0 si 255 asociat unui protocol de rutare pentru ierarhizarea acestuia",
+        "Un criteriu sau un set de criterii de apreciere a calității acesteia",
+        "Un număr care exprimă gradul de încredere al unei rute stabilită prin rularea unor protocoare de rutare",
+        "Sistem de priorități de transmitere a pachetelor de către un ruter 4"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "RIP este un protocol de rutare care:",
+      "answers": [
+        "Foloseste ca metrică întârzierea minimă în rețea",
+        "Se bazează pe starea legăturilor",
+        "Este folosit pentru rutare interdomeniu",
+        "Are numărul maxim de salturi egal cu 15"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care este metrica folosită de RIP pentru determinarea căii optime?",
+      "answers": [
+        "Numărul minim de salturi pană la destinație",
+        "Lățimea de bandă maximă pană la destinație",
+        "Timpul minim pană la destinație",
+        "Rata de eroare minimă până la destinație"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Timpul de convergență al unui protocol de rutare reprezintă:",
+      "answers": [
+        "Timpul dus-întors maxim în care un pachet poate parcurge oricare pereche sursă-destinație din rețea",
+        "Timpul în care toate ruterele din rețea și-au configurat tabela de rutare",
+        "Timpul mediu de prelucrare a pachetelor de către un protocol de rețea",
+        "Timpul de viață al unui pachet în rețea"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Serviciul de postă electronică funcționează pe baza următoarelor protocoale mai cunoscute:",
+      "answers": [
+        "SNMP, RTP, DNS",
+        "POP3, IMAP, SMTP",
+        "IMAP, HTTP, SNMP",
+        "UDP, SNMP, SMTP"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Citirea postei electronice se poarte face cu ajutorul următoarelor protocoale:",
+      "answers": [
+        "SMTP, POP3",
+        "IMAP, SMNP",
+        "POP3, IMAP",
+        "SMTP, SNMP"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "DHCP (Dynamic Host Configuration Protocol) este o aplicație client-server prin care:",
+      "answers": [
+        "Serverul furnizează stației client numele de domeniu si adresa IP necesare funcționării în rețea",
+        "Se determină adresa IP corespunzătoare unui unei stații cu nume de domeniu cunoscut",
+        "Se atribuie adrese fizice stațiilor dintr-o rețea",
+        "Se face configurare IP dinamică stațiilor dintr-o rețea"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Comanda următoare: Router(config)#router ospf 10 dată pe un ruter Cisco are ca efect:",
+      "answers": [
+        "Validarea procesului OSPF pe acel ruter",
+        "Identificarea ruterului care rulează OSPF",
+        "Definirea ariei 10 pe ruter",
+        "Validarea procesului OSPF si definirea ariei"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care dintre următoarele protocoale suportă rutarea ierarhică (adrese de rețea cu mască variabilă)?",
+      "answers": [
+        "RIPv1 si OSPF",
+        "RIPv1 si RIPv2",
+        "OSPF si RIPv2",
+        "RIPv1 si IGRP"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Un obiect administrat prin SNMP este:",
+      "answers": [
+        "Un echipament fizic de rețea care rulează SMTP și permite monitorizarea stării sale de funcționare",
+        "O entitate logică sau fizică de rețea definită în MIB, a cărei stare de funcționare este monitorizată prin SNMP",
+        "partea server a aplicației SMTP",
+        "partea client a aplicației SNMP"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Următoarea adresă IPv6 FE80::200:CFF:FE3A:8B18 este:",
+      "answers": [
+        "Adresă multicast",
+        "Adresă link local",
+        "Adresă site local",
+        "Adresa broadcast"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Adresele IPv6 unicast agregabile globale:",
+      "answers": [
+        "Au formatul de adresă 001/3",
+        "Au structură plată",
+        "Au lungimea totală de 64 biți",
+        "Nu sunt rutabile in Internet"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Protocolul ICMP este folosit de rețelele IPv4 pentru:",
+      "answers": [
+        "Rutare în Internet",
+        "Descoperirea gazdelor conectate în rețea",
+        "Configurarea tabelelor de rutare",
+        "Raporta problemelor legate de livrarea pachetelor IP în rețea"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care dintre afirmațiile următoare despre un agent SNMP sunt adevărate :",
+      "answers": [
+        "Solicită informații de management de la statia de management",
+        "Răspunde interogărilor de management primite de la sistemul de management",
+        "Este un protocol de nivel rețea",
+        "Comunică cu toate echipamentele din rețea pentru a actualiza starea de funcționare curentă"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "O comunitate SNMP este:",
+      "answers": [
+        "Totalitatea elementelor de rețea administrate prin SNMP",
+        "Un mecanism de securitate pentru comunicația dintre sistemul de management si agentul de management",
+        "O rețea în care este instalată aplicația SNMP",
+        "Totalitatea obiectelor administrate prin SNMP"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Comanda Ping este parte din protocolul:",
+      "answers": [
+        "UDP",
+        "TCP",
+        "ICMP",
+        "DNS"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Ce reprezinta o topologie a unei retele de calculatoare?",
+      "answers": [
+        "Topologia reprezinta modul în care comunica un grup de servere.",
+        "Topologia reprezinta structura de vecinătăți folosita pentru a interconecta dispozitivele din retea.",
+        "Topologia reprezinta un set de reguli stabilit prin care utilizatorii pot schimba informatii.",
+        "Topologia reprezinta setul de protocoale folosit în retea."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Protocoalele specifice folosite în rețele virtuale private (VPN) sunt:",
+      "answers": [
+        "LDAP, BGP, ICMP",
+        "L2TP, Dijkstra, IPsec",
+        "IPsec, OpenVPN, SSH",
+        "HTTPS, DHCP, OpenVPN"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "VLAN-ul reprezintă:",
+      "answers": [
+        "O metoda de a subnetiza reteaua.",
+        "Este subreteaua de broadcast.",
+        "Un concept de clasificare a conexiunilor UDP.",
+        "O metoda de a crea rețele virtuale distincte peste o rețea fizică locală"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Ce tipuri de protectie trebuie sa ofere un VPN?",
+      "answers": [
+        "Confidentialitate, integritate, autentificarea clientilor, protectia la replicare si controlul accesului",
+        "Controlul accesului, identificare biometrica, monitorizarea traficului, acord parental",
+        "Confidentialitate, integritate, accesul la internet si accesul pe deep web",
+        "Protectia la replicare, scanarea retelei, criptarea cu OpenVAS, pritectie antispam"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "VLAN-ul folosește două tipuri de porturi pentru a transporta traficul:",
+      "answers": [
+        "Porturi ethernet si porturi locale.",
+        "Porturi ethernet si porturide consolă.",
+        "Porturi trunk si porturi de acces.",
+        "Poturi auxiliare si porturi de consolă."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "OpenVPN foloseste doua canale virtuale pentru a comunica intre client si server:",
+      "answers": [
+        "Un canal de control TLS pentru schimbul de informatii si un canal de date.",
+        "Authentication Header (AH) si Encapsulating Security Payload (ESP).",
+        "Un canal de control TLS pentru schimbul de informatii si Internet Key Exchange (IKE) protocol.",
+        "Encapsulating Security Payload (ESP) si Internet Key Exchange (IKE) protocol."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Antetul unei datagrame UDP conține:",
+      "answers": [
+        "Adresa IP sursă, adresa IP destinație, portul sursă, portul desinație",
+        "Portul sursă, portul destinație, lungime totală, sumă de control",
+        "Portul sursă, portul destinație, lungimea datagramei, numărul de secvență",
+        "Portul sursă, portul destinație, control erori, număr de secvență"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Subnetizarea este procesul prin care:",
+      "answers": [
+        "Se unesc mai multe retele publice cu cele private prin o adresa de tipul 255.255.255.0.",
+        "Se sparge o retea in doua sau mai multe retele (sau subretele). Un subnet este o subdivizare logica a unui IP.",
+        "Se folosesc clasele private în cadrul Internetului public prin adaugarea unor numere aleatorii la adresa sau adresele existente.",
+        "O rețea cu adresă IP publică este divizată în mai multe subrețele prin folosirea unor adrese IP private"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fereastra glisanta a protocolului TCP are urmatoarele proprietati:",
+      "answers": [
+        "Imparte fluxul de date pe pachete cu dimensiuni fixe si seteaza antentul.",
+        "Reseteaza conexiunile în cazul apariției congestiei în rețea.",
+        "Se redimensioneaza pentru a încerca să limiteze numărul de erori de retransmisie dar încercand să păstreze cel mai mare flux de date.",
+        "Nici un raspuns nu este valid. 8"
+      ],
+      "correct_answer": null
+    }
+  ],
+  "tehnologii_web": [
+    {
+      "question": "Care sunt atribute pentru tagul input din HTML 5?",
+      "answers": [
+        "accept;",
+        "auto-complete;",
+        "day_time ;",
+        "form_action;"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Atributul name este utilizat pentru tagurile?",
+      "answers": [
+        "link, textarea, select;",
+        "form, input, map, a, img;",
+        "input, div a, iframe;",
+        "radio, checkbox, style;"
+      ],
+      "correct_answer": null
+    }
+  ],
+  "comert_electronic": [
+    {
+      "question": "Cardurile bancare nu contin:",
+      "answers": [
+        "Numele emitentului, numarul cardului, perioada de valabilitate, numele posesoruluiinscriptionate pe avers prin tiparire, gofrare sau gravare cu laser",
+        "Sigla emitentului, holograma de securitate, logo-ul organizatiei, pe avers",
+        "Suma de bani aflata in contul posesorului",
+        "Banda magnetica si/sau smart card"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Mecanismele de baza ale comertului electronic sunt:",
+      "answers": [
+        "C2C",
+        "B2C",
+        "B2B",
+        "toate"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Conform Legii comertului electronic din Romania, falsificarea instrumentelor de plata electronica se pedepseste cu:",
+      "answers": [
+        "in lege nu sunt prevazute sanctiuni",
+        "cu inchisoare de la 3 la 12 ani si interzicerea unor drepturi",
+        "cu amenda contraventionala sau inchisoare de la 1 la 2 ani",
+        "tentativa se pedepseste"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Proiectarea, implementarea si dezvoltarea unui site de comert electronic se poate face folosind aplicatia software:",
+      "answers": [
+        "Pay Pal",
+        "IBM BMP Suite",
+        "MOODLE",
+        "OsCommerce"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care din urmatoarele enunturi referitoare la comertul electronic este fals:",
+      "answers": [
+        "eBay.com este cel mai mare magazin de comert electronic la nivel mondial",
+        "Skimming-ul si phishing-ul utilizate in fraude cu carduri bancare si furt de identitate reprezinta infractiuni criminale informatice",
+        "Protocolul SET (Secure Electronic Transaction) reprezinta un pachet de specificatii de securitate si de formate, dezvoltat de Visa si MasterCard, care permit utilizatorilor sa efectueze plati electronice cu cardurile bancare in Internet",
+        "E-commerce (comertul electronic) reprezinta o strategie moderna in ceea ce priveste modul de a face afaceri, cea mai importanta componenta a sa fiind E-business (alaceri electronice)"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Conform legislatiei nationale in vigoare, consumatorul are dreptul de a denunta unilateral contractul la distanta, fara penalitati si fara invocarea vreunui motiv in timp de:",
+      "answers": [
+        "30 de zile calendaristice de la semnare",
+        "15 zile lucratoare de la semnare",
+        "10 zile lucratoare de la semnare, daca comerciantul a specificat conditiile de denuntare unilaterala a contractului incheiat la distanta",
+        "90 de zile de la semnarea contractului incheiat la distanta"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Arhitectura Java Card nu contine nivelul:",
+      "answers": [
+        "Cardlet-uri (applet-uri), aplicatii care sunt incarcate in card printr-un incarcator standard (de exemplu, EZ Formatter);",
+        "Masina Virtuala Java, inclusa in card, care este un interpretor care translateaza codul Java in instructiuni ale microprocesorului",
+        "Sesiune de prezentare, nivel intermediar intre Cardlet-uri si Masina Virtuala Java",
+        "Sistemul de operare GPOS- General Purpose Operating System"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Operatiunile cu carduri bancare cuprind urmatoarele etape:",
+      "answers": [
+        "emiterea cardurilor",
+        "acceptarea cardurilor",
+        "distrugerea cardurilor",
+        "toate"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Dupa modul de stocare a caracteristicilor de securitate cardurile se impart in:",
+      "answers": [
+        "carduri cu banda magnetica - care contin pe 3 piste ce memoreaza informatii criptate despre utilizator, emitent, algoritmul de codare etc;",
+        "carduri cu microprocesor – smart-carduri- avand stocate in chip datele de securitate si permitand functionarea ca portofel electronic",
+        "carduri de debit - care asigura utilizatorului achizitionarea de bunuri si servicii sau retrageri de numerar, cu conditia prezervarii unor fonduri intr-un cont de card, si efectuarea de cheltuieli in limita soldului disponibil",
+        "numai a) si b)"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Protocolul SET (Secure Electronic Transaction) asigură urmatoarele:",
+      "answers": [
+        "un canal securizat între toate părtile implicate într-o tranzactie",
+        "imbunătătirea secretului tranzactiilor; informatia este accesibilă părtilor unei tranzactii numai în măsura în care este necesar.",
+        "autentificarea participantilor la tranzactii prin folosirea certificatelor digitale",
+        "toate"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "In domeniul educatiei de tip e-learning, parte componenta a e-business, se poate implementa si utiliza platforma opensource:",
+      "answers": [
+        "Zen Cart",
+        "OSCommerce",
+        "MOODLE",
+        "IBM WebSphere"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care din urmatoarele enunturi este fals referitor la dezavantajele utilizarii e-commerce:",
+      "answers": [
+        "aspectele privind securitatea comertului electronic – cea mai complexa problema",
+        "acceptarea noilor modalitati de plata (bani electronici/digitali)",
+        "intermediarii pot fi eliminati din lantul de aprovizionare",
+        "existenta unui cadrul legal si normativ unitar la nivel global: cadrul fiscal, drepturile asupra proprietatii, protectia datelor consumatorului"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care dintre urmatoarele enunturi reprezinta componente ale e-business:",
+      "answers": [
+        "CRM – Customer Relationship Management",
+        "SCM – Supply Chain Management",
+        "ERP – Enterprise Resource Planning",
+        "toate"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care din urmatoarele modele nu este specific pentru e-commerce:",
+      "answers": [
+        "Modelul Paul Timmers",
+        "Modelul David Kosiur",
+        "Modelul Willian Stallings",
+        "Modelul Michael Rappa"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Modelul David Kosiur prezinta cinci procese de baza care au loc in cadrul comertului electronic. Aceste procese sunt:",
+      "answers": [
+        "distribuirea informatiilor, lansarea comenzilor, plata, onorarea comenzilor, service-ul si asistenta",
+        "ofertarea, plata, onorarea comenzilor, service-ul si asistenta, postgarantie",
+        "stabilirea pretului, lansarea produselor, plata, distribuitia, receptia",
+        "distribuirea informatiilor, stabilirea pretului, livrarea, receptia, service-ul si asistenta"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care din elementele enumerate nu este specific unui sistem de comert electronic:",
+      "answers": [
+        "serverele organizatiei care ofera servicii on-line accesibile prin Internet",
+        "clientii (persoane fizice sau juridice) care se conecteaza la server folosind diverse tipuri de dispozitive",
+        "conturile bancare ale participantilor la care sunt asociate carduri bancare (credit, debit)",
+        "tranzactiile - raportate la bunurile si serviciile cumparate"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "In cadrul unui sistem de comert electronic o protectie adecvata trebuie acordata consumatorului, protectie care se refera la mai multe aspecte. Care dintre aspectele enumerate este fals?",
+      "answers": [
+        "interzicerea publicitatii inselatoare",
+        "interzicerea promovarii produselor",
+        "reglementarea serviciilor financiare",
+        "reguli privind raspunderea referitoare la produsele necorespunzatoare"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care din urmatoarele enunturi nu este un sistem de microplata electronica:",
+      "answers": [
+        "Cybercoin (proiect CyberCash)",
+        "Euro-MicroPayment (proiect UE)",
+        "Millicent (proiect Digital)",
+        "Micro-Payment (proiect Consortiul W3)"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care din urmatoarele protocoale este specific este specific pentru tranzactiile electronice:",
+      "answers": [
+        "FTP",
+        "ARP",
+        "STP",
+        "iKP"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Conform protocolului 3KP toti participantii la o tranzactie electronica trebuie sa posede:",
+      "answers": [
+        "bani in cont pentru a face tranzactia",
+        "certificat digital cu cheia sa publica, precum si cheia privata",
+        "doar un certificat digital",
+        "canale de comunicatie securizate peste Internet"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Un sistem electronic de plati poate fi definit ca un ansamblu de tranzactii generate de:",
+      "answers": [
+        "conversia banilor numerar in bani electronici si invers",
+        "verificarea conturilor bancare asociate cumparatorului sau vanzatorului",
+        "schimbul de mesaje criptate si semnate electronic intre participanti (vanzator, cumparator, banci)",
+        "operatiile bancare rezultate pe durata efectuarii tranzactiilor electronice"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care dintre enunturile de mai jos nu constituie o infractiune cu carti de credit:",
+      "answers": [
+        "SKIMMING",
+        "PIMMING",
+        "PHARMING",
+        "PHISING"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Infrastructura de comunicatii a unei organizatii care realizeaza comert electronic trebuie sa contina urmatoarele doua elemente de baza:",
+      "answers": [
+        "e-commerce front-end",
+        "e-commerce back-end",
+        "componente middleware",
+        "toate"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Ce etape implica realizarea unui site Web de comert electronic:",
+      "answers": [
+        "analiza si planificarea site-ului",
+        "proiectarea si testarea site-ului",
+        "implementarea si promovarea",
+        "toate"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care dintre enunturile de mai jos nu este un participant in tranzactiile de plata din protocoalele iKP:",
+      "answers": [
+        "verificator",
+        "cumparator",
+        "achizitor",
+        "vanzator"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Protocolul SET defineste o diversitate de tranzactii care folosesc concepte criptografice. Care dintre conceptele enumerate mai jos nu se foloseste in protocolul SET:",
+      "answers": [
+        "certificate digitale",
+        "SSL / TLS",
+        "semnatura duala",
+        "semnatura digitala"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Modelul unui sistem electronic de plati (Electronic Payment System-EPS) implica, in general, urmatoarele cel putin urmatoarele entitati care interactioneaza:",
+      "answers": [
+        "o banca B, un cumparator C si un vanzator V",
+        "o banca B, un procesator de carduri P, un cumparator C si un vanzator V",
+        "un procesator de carduri P, un cumparator C si un vanzator V",
+        "un cumparator C, o banca a lui C, un vanzator V si o banca a lui V"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Un <scrip> din cadrul protocolului MilliCent are urmatoarele proprietati principalele:",
+      "answers": [
+        "are valoare doar pentru anumiti vanzatori",
+        "se poate cheltui o singura data",
+        "este rezistent la falsicare si greu de contrafacut",
+        "toate"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "In domeniul platilor prin card, transferul electronic de fonduri poate fi realizat cu ajutorul:",
+      "answers": [
+        "ghiseul automat de banca (ATM - Automatic Teller Machine)",
+        "puncte electronice de vanzare la comercianti (EFT POS-Point of Sale)",
+        "carduri bancare (cu banda magnetica sau smartcard)",
+        "toate"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "La fiecare noua tranzactie, portofelul electronic vWALLET implementat de firma VeriFone recunoaste urmatoarele tipuri de instrumente:",
+      "answers": [
+        "VISA, MasterCard",
+        "VISA, MasterCard, American Express, JCB",
+        "JCB",
+        "American Express"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care dintre enunturile de mai jos nu reprezinta o norma in domeniul comertului electronic:",
+      "answers": [
+        "UNCITRAL",
+        "Directiva 31/2000/CE",
+        "Legea nr.1/2011",
+        "Legea 365/2002"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Una dintre afirmatiile de mai jos referitoare la aspectele critice si dezavantajele comertului electronic este falsa. Care este aceea?",
+      "answers": [
+        "aspectele privind securitatea comertului electronic – cea mai complexa problema",
+        "acceptarea noilor modalitati de plata (bani electronici/digitali)",
+        "stocurile pot fi minimizate sau chiar eliminate prin procese de productie „Just-In-Time”",
+        "cadrul legal si normativ: cadrul fiscal, drepturile asupra proprietatii, protectia datelor consumatorului"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "In raport cu sursa de acoperire a cheltuielilor cardurile se impart in:",
+      "answers": [
+        "carduri cu banda magnetica - care contin pe 3 piste ce memoreaza informatii criptate despre utilizator, emitent, algoritmul de codare etc.",
+        "carduri de credit - care asigura utilizatorului achizitionarea de bunuri si servicii sau retrageri de numerar, pe baza unei linii de credit acordate posesorului de card",
+        "carduri de debit - care asigura utilizatorului achizitionarea de bunuri si servicii sau retrageri de numerar, cu conditia prezervarii unor fonduri intr-un cont de card, si efectuarea de cheltuieli in limita soldului disponibil",
+        "numai b) si c)"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Cardurile cu microprocesor se impart in urmatoarele categorii:",
+      "answers": [
+        "carduri cu contact (contact-card)",
+        "carduri cu memorie (memory-card)",
+        "carduri fara contact (contactless-card)",
+        "numai a) si c) 5"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care din următoarele enunturi nu reprezintă un tip de organizatie de comert electronic:",
+      "answers": [
+        "organizatii de tip brick-and-mortar",
+        "organizatii de tip click-and-brick sau click-and-mortar",
+        "organizatii de tip click-and-click",
+        "organizatii de tip virtual business"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Conform OG 34/2006, achizitiile publice în România se derulează pe platforma online:",
+      "answers": [
+        "SEAP",
+        "SETI",
+        "ANISP",
+        "ORDA"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Tranzactiile electronice din punctul de vedere al comertului electronic prezintă următoarele cerinte:",
+      "answers": [
+        "cerinte privind legislatia aplicabilă",
+        "cerinte privind standardele acceptate",
+        "cerinte privind securitatea tranzactiilor",
+        "toate"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Utilizarea cardurilor bancare la retragerea de numerar dintr-un ATM presupune autentificarea cu:",
+      "answers": [
+        "un factor sau A (ce am? sau ce stiu?)",
+        "doi factori sau AA (ce am ? si ce stiu?)",
+        "trei factori sau AAA (ce am ? si ce stiu? si cine sunt?)",
+        "patru factori sau AAAA (ce am ? si ce stiu? si cine sunt? si unde sunt?)"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Principalele amenintari asupra tranzactiilor din comertul electronic sunt:",
+      "answers": [
+        "Interceptarea informatiilor referitoare la plata (de exemplu numarul cardului de credit si a numărului CVV)",
+        "Interceptarea parolelor sau a altor informatii de acces ale sistemului (de exemplu, PIN)",
+        "Modificarea datelor unei tranzactii inaintea livrarii",
+        "toate"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Un sistem electronic de plati (Electronic Payment System-EPS) poate fi definit ca un ansamblu de tranzactii generate de:",
+      "answers": [
+        "conversia banilor numerar (cash sau din cont) in bani electronici si invers",
+        "transferul banilor electronici intre utilizatorii care folosesc sistemul EPS",
+        "extragerea de bani din cont, efectuarea unei plati sau depunerea banilor electronici într-o banca",
+        "toate"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care din urmatoarele roluri de mai jos nu este asociat unei Autorităti de Certificare (AC):",
+      "answers": [
+        "să emită si să revoce certificate digitale X.509 v3",
+        "să efectueze tranzactii de bani electronici",
+        "să autentifice cererile de chei publice ale utilizatorilor",
+        "să înlocuiască certificate digitale X.509 v3"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Indicatorul Major de Industrie – MII (Major Industry Identifier) pentru VISA si MasterCard au valorile:",
+      "answers": [
+        "2 si 3",
+        "3 si 4",
+        "4 si 5",
+        "5 si 6"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Un certificat digital emis de o Autoritate de Certificare nu contine:",
+      "answers": [
+        "cheia secreta a detinatorului",
+        "cheia publica a detinatorului",
+        "Autoritatea de Certificare care a emis certiificatul digital",
+        "algoritmii folositi (RSA cu MD5) 7"
+      ],
+      "correct_answer": null
+    }
+  ],
+  "cloud_computing": [
+    {
+      "question": "Produsul NoSQL oferit de AWS este:",
+      "answers": [
+        "DynamoDB",
+        "MongoDB",
+        "RDS",
+        "CloudWatch"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Serviciul DNS oferit de AWS este denumit:",
+      "answers": [
+        "Cloud DNS",
+        "Cloud Front",
+        "Cloud Trial",
+        "Route53"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care sunt modelele standard de servicii funizate “cloud computing”:",
+      "answers": [
+        "IaaS, PaaS, XaaS",
+        "SaaS, XaaS, MaaS",
+        "PaaS, SaaS, MaaS",
+        "Iaas, PaaS, SaaS"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Autentificarea multifactor se poate face in AWS folosind:",
+      "answers": [
+        "RDS",
+        "IAM",
+        "DynamoDB",
+        "Accout Settings"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "AWS S3 reprezinta:",
+      "answers": [
+        "Object Base Storage",
+        "Block Base Storage",
+        "A Data Warehouse Solution",
+        "Suitable for Data Archival"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fiecare utilizator creat in AWS IAM are implicit:",
+      "answers": [
+        "Full Permission",
+        "Partial Permissions",
+        "No Permissions",
+        "Dedicated Permissions"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "In AWS S3 durabilitatea fisierelor este de:",
+      "answers": [
+        "99,99 %",
+        "99,999999999 %",
+        "100 %",
+        "99 % 1"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Serviciul de CloudFormation permite:",
+      "answers": [
+        "Stop, Terminate, Reboot sau Recover a unei instante EC2",
+        "Lansa, configura si conecta resurse AWS cu template JavaScript Object Notation (JSON)",
+        "Monitoriza si comanda o instanta EC2",
+        "Trimite mesaje de tip AWS Simple Notification Services (SNS)"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Instantele AWS EC2 sunt provizionate:",
+      "answers": [
+        "In Regiuni",
+        "Global",
+        "In Zonele de Disponibilitate",
+        "In Centrele de Date"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Baza de date SQL proprietara pentru platforma AWS este:",
+      "answers": [
+        "Aurora",
+        "MangoDB",
+        "MySQL",
+        "DynamoDB"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "AWS Simple Notification Service (SNS) permite sa:",
+      "answers": [
+        "Ofere subscriptii de tipul: email, HTTP/HTTPS, SMS text, SQS Queries, functii Lamba",
+        "Seta, opera si transmite notificari catre serviciile utilizate in diferite aplicatii",
+        "Monitoriza si comanda o instanta EC2",
+        "Functioneaza impreuna cu serviciul ColudWatch"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Serviciul Elastic Cloud Computing – EC2 asigura:",
+      "answers": [
+        "Crea, salve si reutiliza instante (Amazon Machine Images)",
+        "Lansarea unei instante sau a unei flote de instante",
+        "Folosirea de diferite tipuri de CPU, memorie, storage, grafica, retele",
+        "Toate"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Ce baze de date RDS sunt disponibile in AWS:",
+      "answers": [
+        "Aurora, MySQL, SQL, Cassandra",
+        "PostGres, Cassandra, MangoDB, Aurora",
+        "Oracle, SQL, MySQL, Cassandra",
+        "Oracle, SQL, MySQL, PostGres"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care sunt modalitatile de plata pentru instantele AWS EC2:",
+      "answers": [
+        "On-Demand, Savings Plans, Reserved Instances, Spot Instances",
+        "Savings Plans, Reserved Instances, Spot Instances",
+        "Reserved Instances, Spot Instances",
+        "Spot Instances, Savings Plans, Reserved Instances"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Alarmele din serviciul CloudWatch indeplinesc urmatoarele actiuni:",
+      "answers": [
+        "Reboot sau Recover a unei baze de date NoSQL",
+        "Scala un AutoScaling grup In sau Out de VPC",
+        "Monitoriza si comanda resursele si serviciile din AWS",
+        "Trimite mesaje SMS"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Cum se monitorizeaza resursele oferite AWS:",
+      "answers": [
+        "AWS CloudWatch",
+        "Unelte furnizate de Terte-Parti",
+        "Dashboard EC2",
+        "Configurarea de notificari cand orice eveniment semnificant se intampla"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Care este cel mai mare furnizor de coud computing din lume?",
+      "answers": [
+        "Google Cloud",
+        "Amazon Web Services",
+        "Microsoft Azure",
+        "Alibaba 2"
+      ],
+      "correct_answer": null
+    }
+  ],
+  "inovare_și_transformare_digitală": [
+    {
+      "question": "Inovarea reprezintă:",
+      "answers": [
+        "Procesul prin care o inovație (produs sau procedeu/tehnologie/proces), pornind de la o invenție sau o îmbunătățire semnificativă, ajunge să fie implementată în activitatea unei organizații sau valorificată pe piață.",
+        "Un produs a cărui culoare și formă au fost schimbate, fără nicio îmbunătățire semnificativă.",
+        "Procesul prin care o inovație (produs sau procedeu/tehnologie), pornind exclusiv de la o invenție, ajunge să fie implementată în activitatea unei organizații sau valorificată pe piață.",
+        "Procesul prin care o inovație (produs sau procedeu/tehnologie), pornind exclusiv de la o îmbunătățire semnificativă, ajunge să fie implementată în activitatea unei organizații sau valorificată pe piață"
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "În funcție de gradul de schimbare (intensitatea schimbării generate), inovarea se clasifică în:",
+      "answers": [
+        "Inovare nouă pentru o organizație și inovare nouă pentru o anumită piață.",
+        "Inovare radicală și inovare incrementală.",
+        "Inovare care schimbă structura pieței si inovare care creează noi piețe.",
+        "Inovare nouă pentru întreaga lume și inovare radicală."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "In funcție de tip (obiect), inovarea se clasifică în:",
+      "answers": [
+        "Inovare radicală și inovare incrementală.",
+        "Inovare care schimbă structura pieței si inovare care crează noi piețe.",
+        "Inovare de produs și inovare de proces de afaceri.",
+        "Inovare nouă pentru o organizație și inovare nouă pentru întreaga lume."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Produsul reprezintă:",
+      "answers": [
+        "Bun și/sau serviciu.",
+        "Bun nou.",
+        "Serviciu nou.",
+        "Bun și/sau tehnologie."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Invenția privind linia de asamblare reprezintă un exemplu de:",
+      "answers": [
+        "Inovare de proces de afaceri.",
+        "Inovare de produs.",
+        "Inovare pentru o anumită piață.",
+        "Nu reprezintă inovare."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Schimbarea culorii sau o schimbare minoră a formei unui produs:",
+      "answers": [
+        "Reprezintă îmbunătățiri semnificative, caracteristice unei inovații.",
+        "Nu reprezintă îmbunătățiri semnificative, caracteristice unei inovații.",
+        "Reprezintă invenții.",
+        "Reprezintă inovare de produs."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Conform Manualului Frascati (2015), cele 5 criterii pe care trebuie să le îndeplinească activităților de cercetare-dezvoltare sunt:",
+      "answers": [
+        "Nou, creativ, se adresează unui rezultat incert, sistematic și transferabil sau reproductibil.",
+        "Fără noutate, necreativ, cu rezultat sigur, nesistematic și netransferabil.",
+        "Fără noutate, creativ, cu rezultat sigur, netransferabil și nereproductibil.",
+        "Activitățile de cercetare-dezvoltare nu necesită criterii pentru a fi definite."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Activitățile de cercetare-dezvoltare se clasifică în:",
+      "answers": [
+        "Cercetare directă, cercetare indirectă, cercetare științifică și dezvoltare experimentală.",
+        "Cercetare științifică, cuprinzând cercetarea fundamentală și cercetarea aplicativă, și dezvoltare experimentală.",
+        "Cercetare din fonduri publice și cercetare din fonduri private.",
+        "Cercetare fundamentală, cercetare aplicativă și cercetare din fonduri private."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Transformarea digitală se referă la (are ca obiectiv):",
+      "answers": [
+        "Integrarea tehnologiilor digitale in procesele de bază ale organizației și înțelegerea impactului acestor tehnologii asupra societății.",
+        "Integrarea inovării in organizație.",
+        "Integrarea organizațiilor in clustere de inovare.",
+        "Integrarea tehnologiilor digitale în procesele secundare/suport ale organizației și înțelegerea impactului acestor tehnologii asupra societății."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Fluxul logic de acțiuni obligatorii în procesul de transformare digitală este:",
+      "answers": [
+        "Digitalizare si inovare.",
+        "Digitizare, digitalizare și transformare digitală.",
+        "Transformare digitală și inovare.",
+        "Digitalizare, transformare digitală și inovare."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Digitizarea reprezintă:",
+      "answers": [
+        "Procesul care integrează toate datele digitizate și procesele digitalizate în noi aplicații de afaceri.",
+        "Procesul prin care informația devine disponibilă și accesibilă în format analog.",
+        "Procesul prin care informația devine disponibilă și accesibilă în format digital.",
+        "Acțiunea de a face procesele să aibă un grad mai mare de automatizare prin folosirea instrumentelor digitale."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Transformarea digitală reprezintă:",
+      "answers": [
+        "Procesul prin care informația devine disponibilă și accesibilă în format analog.",
+        "Procesul care integrează toate datele digitizate și procesele digitalizate în noi aplicații de afaceri.",
+        "Procesul prin care informația devine disponibilă și accesibilă în format digital.",
+        "Integrarea inovării in organizație."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Unul dintre beneficiile transformării digitale în organizații îl reprezintă:",
+      "answers": [
+        "Creșterea numărului de operațiuni.",
+        "Operațiunile autonome și de la distanță.",
+        "Creșterea numărului de angajați.",
+        "Creșterea costurilor de operare."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Nivelul de digitalizare al economiilor statelor membre ale Uniunii Europene (UE) se măsoară prin:",
+      "answers": [
+        "Indicele compozit EIS (European Innovation Scoreboard).",
+        "Indicele compozit DESI (Digital Economy and Society Index).",
+        "Indicele compozit GII (Global Innovation Index).",
+        "Nu există indici compoziți care măsoară nivelul de digitalizare."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Modelul de proces de inovare ““piața care trage” (“market pull”) reprezintă:",
+      "answers": [
+        "Inovare de produs.",
+        "Inovare de proces de afaceri.",
+        "Un model de proces de inovare care ține cont de nevoile pieței, respectiv care presupune orientarea activităților de cercetare-dezvoltare în funcție de cerințele pieței.",
+        "Un model de proces de inovare, care presupune că inovațiile sunt generate de organizație și împinse către piață, fără a se ține cont de nevoile pieței."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Activitățile de inovare în firmă reprezintă:",
+      "answers": [
+        "Exclusiv activitățile de dezvoltare (cercetare-dezvoltare) întreprinse de o firmă și care au scopul să sprijine realizarea unei inovații.",
+        "Toate activitățile de dezvoltare (cercetare-dezvoltare), financiare și comerciale întreprinse de o firmă și care au scopul să aibă ca rezultat o inovație.",
+        "Exclusiv activitățile de cercetare științifică (cercetarea fundamentală și cercetarea aplicativă) întreprinse de o firmă și care au scopul să sprijine realizarea unei inovații.",
+        "Exclusiv activitățile financiare și comerciale întreprinse de o firmă și care au scopul să sprijine realizarea unei inovații."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "În funcție de gradul de noutate, inovarea se clasifică în:",
+      "answers": [
+        "Nouă pentru organizație și nouă pentru întreaga lume.",
+        "Nouă pentru organizație, nouă pentru o anumită piață și nouă pentru întreaga lume.",
+        "Nouă pentru o anumită piață și nouă pentru întreaga lume.",
+        "Nouă pentru organizație și nouă pentru o anumită piață."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Inovarea de produs reprezintă:",
+      "answers": [
+        "Un bun sau un serviciu nou (invenție) sau care este semnificativ îmbunătățit față de bunurile sau serviciile anterioare ale întreprinderii și care a fost introdus pe piață.",
+        "Exclusiv un bun sau un serviciu nou (invenție) care a fost introdus pe piață.",
+        "Exclusiv un bun sau un serviciu care este semnificativ îmbunătățit față de bunurile sau serviciile anterioare ale întreprinderii și care a fost introdus pe piață.",
+        "Un proces de afaceri nou (invenție) sau care este semnificativ îmbunătățit față de procesele de afaceri anterioare ale întreprinderii (firmei) și care a fost introdus pe piață sau în activitatea întreprinderii."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Inovarea de proces de afaceri reprezintă:",
+      "answers": [
+        "Un proces de afaceri nou (invenție) sau semnificativ îmbunătățit pentru una sau mai multe funcții de afacere/diferă semnificativ față de procesele de afaceri anterioare ale întreprinderii și care a fost introdus în utilizare (în activitate) de către întreprindere sau valorificat (introdus) pe piață.",
+        "Exclusiv un proces de afaceri nou (invenție) pentru una sau mai multe funcții de afacere și care a fost introdus în utilizare (în activitate) de către întreprindere sau valorificat (introdus) pe piață.",
+        "Exclusiv un proces de afaceri semnificativ îmbunătățit pentru una sau mai multe funcții de afacere/diferă semnificativ față de procesele de afaceri anterioare ale întreprinderii și care a fost introdus în utilizare (în activitate) de către întreprindere sau valorificat (introdus) pe piață.",
+        "Un bun sau un serviciu nou (invenție) sau care este semnificativ îmbunătățit/diferă semnificativ față de bunurile sau serviciile anterioare ale întreprinderii și care a fost introdus pe piață."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Modelul de proces de inovare “inovarea deschisă” reprezintă:",
+      "answers": [
+        "Inovare de proces de afaceri.",
+        "Inovare de produs.",
+        "Un model de proces de inovare care presupune deschiderea procesului de inovare către orice abordare, configurare/reconfigurare, parte interesată (inclusiv autorități publice și clienți), resursă, sursă de cunoaștere, parteneriat, care ar putea aduce suport și aport la ajungerea unei inovații pe piață (in orice etapă a procesului de inovare, de la idee până la inovația ajunsă pe piață), implicând efort comun și împărțirea beneficiilor.",
+        "Un model de proces de inovare care presupune creșterea importanței tehnologiei în asistarea procesului de inovare prin utilizarea unor platforme comune de software pentru proiectarea și producția asistate pe calculator."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Indicatorii de inovare reprezintă:",
+      "answers": [
+        "Informație specifică măsurată, într-un anumit moment, despre un fenomen al inovării (intrare, activitate, ieșire, rezultat final).",
+        "Capabilitățile de inovare într-o organizație.",
+        "Ieșirile/rezultatele imediate din activitățile de inovare.",
+        "Incidența inovării și caracteristicile acesteia (ex. tip, noutate)."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Un exemplu de indicator de inovare la nivel de sistem de cercetare-dezvoltare-inovare (sistemul național) este următorul:",
+      "answers": [
+        "Influențele externe asupra inovării (inclusiv politicile publice) și condițiile cadru pentru inovare (inclusiv infrastructura de cunoaștere).",
+        "Firme care utilizează tehnologii avansate, tehnologii generice esențiale (Key Enabling Technologies) sau tehnologii emergente (% din total firme).",
+        "Un model de proces de inovare, care presupune că inovațiile sunt generate de organizație și împinse către piață, fără a se ține cont de nevoile pieței.",
+        "Un model de proces de inovare care ține cont de nevoile pieței, respectiv care presupune orientarea activităților de cercetare-dezvoltare în funcție de cerințele pieței."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Performanța în inovare a statelor membre ale Uniunii Europene (UE) se măsoară prin:",
+      "answers": [
+        "Indicele compozit EIS (European Innovation Scoreboard/Tabloul de bord european al inovării).",
+        "Indicele compozit DESI (Digital Economy and Society Index).",
+        "Indicele compozit GII (Global Innovation Index).",
+        "Nu există indici compoziți care măsoară nivelul de digitalizare."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Măsurarea cât mai corectă a inovării la nivel de organizație este necesară deoarece:",
+      "answers": [
+        "Susține creșterea numărului de operațiuni; susține creșterea numărului de angajați, facilitează operațiuni autonome și de la distanță.",
+        "Facilitează automatizarea proceselor de bază în organizație;",
+        "Furnizează, în general, o direcție strategică pentru activitățile inovatoare; ghidează alocarea de resurse pentru proiectele de inovare; facilitează diagnosticarea și îmbunătățirea performanței de inovare a unei organizații.",
+        "Susține un model de proces de inovare care ține cont de nevoile pieței, respectiv care presupune orientarea activităților de cercetare-dezvoltare în funcție de cerințele pieței."
+      ],
+      "correct_answer": null
+    },
+    {
+      "question": "Industry 5.0 reprezintă:",
+      "answers": [
+        "A 5-a revoluție industrială, care se bazează exclusiv pe producția în masă.",
+        "A 5-a revoluție industrială care presupune că potențialul de progres se bazează pe Inteligența Artificială, colaborarea dintre oameni și mașini, țintind dincolo de eficiență și productivitate, către rolul și contribuția industriei la societate.",
+        "A 5-a revoluție industrială, care se bazează exclusiv pe digitizare și digitalizare.",
+        "A 5-a revoluție industrială, care se bazează exclusiv pe sisteme cyber-fizice (Cyber Physical Systems), care sunt conectate prin intermediul internetului. 6"
+      ],
+      "correct_answer": null
+    }
+  ]
+}
