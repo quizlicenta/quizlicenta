@@ -79,10 +79,11 @@ class _QuizzWidgetState extends State<QuizzWidget> {
   @override
   Widget build(BuildContext context) {
     final imagePath = _model.question?.image ?? '';
-    final resolvedImagePath = imagePath.isNotEmpty &&
-            !imagePath.startsWith('assets/images/')
-        ? 'assets/images/$imagePath'
-        : imagePath;
+    final resolvedImagePath = imagePath.isEmpty
+        ? ''
+        : imagePath.startsWith('assets/')
+            ? imagePath
+            : 'assets/images/$imagePath';
     final imageHeroTag = 'question-image-${_model.questionIndex}';
     return Title(
         title: 'Quizz',
